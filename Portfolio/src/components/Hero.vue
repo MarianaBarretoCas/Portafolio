@@ -1,0 +1,122 @@
+<script setup>
+import { Icon } from "@iconify/vue";
+</script>
+
+<template>
+  <section
+    id="home"
+    class="max-w-7xl mx-auto px-6 py-5 grid lg:grid-cols-2 items-center gap-12 text-left lg:-translate-y-16 lg:-mb-16"
+  >
+    <div class="info">
+      <h3 class="text-violet-400 mb-2 text-sm tracking-widest">HELLO! I'M</h3>
+      <h1 class="text-5xl lg:text-6xl font-bold text-white mb-1">
+        Mariana Barreto
+      </h1>
+      <h3 class="text-purple-400 font-semibold mb-3">
+        Functional Software Analyst & Developer
+      </h3>
+      <p class="text-slate-300 leading-relaxed max-w-lg mb-1">
+        I help businesses and teams turn ideas into effective digital solutions
+        with code, analysis and a user-focused mindset.
+      </p>
+      <div class="flex items-center gap-4 mt-8">
+        <a
+          href="#projects"
+          class="group flex items-center gap-2 border border-transparent bg-gradient-to-r from-purple-700 to-violet-700 text-white font-medium py-3 px-6 rounded-xl shadow-md shadow-violet-900/30 hover:-translate-y-1 hover:from-purple-600 hover:to-violet-600 hover:shadow-[0_0_22px_rgba(139,92,246,0.45)] transition-all duration-300"
+        >
+          View my work
+          <Icon
+            icon="bitcoin-icons:arrow-right-filled"
+            class="text-lg group-hover:translate-x-1 transition-transform duration-300"
+          />
+        </a>
+
+        <a
+          href="#contact"
+          class="group flex items-center gap-2 border border-purple-500 bg-transparent text-white font-medium py-3 px-6 rounded-xl hover:-translate-y-1 hover:bg-violet-500/10 hover:border-violet-400 hover:shadow-[0_0_18px_rgba(139,92,246,0.28)] transition-all duration-300"
+        >
+          Contact me
+          <Icon
+            icon="streamline-cyber:email-2"
+            class="text-lg group-hover:scale-110 group-hover:text-violet-300 transition-all duration-300"
+          />
+        </a>
+      </div>
+      <div id="socialIcons" class="flex items-center gap-3 mt-5">
+        <a
+          href="#"
+          class="group inline-flex size-11 items-center justify-center rounded-xl border border-white/10 hover:-translate-y-1 hover:border-violet-500 hover:bg-violet-500/10 hover:shadow-[0_0_18px_rgba(139,92,246,0.25)] transition-all duration-300"
+        >
+          <Icon
+            icon="mdi:linkedin"
+            class="text-xl text-blue-500 group-hover:text-blue-400 group-hover:scale-110 transition-all duration-300"
+          />
+        </a>
+
+        <a
+          href="#"
+          class="group inline-flex size-11 items-center justify-center rounded-xl border border-white/10 hover:-translate-y-1 hover:border-violet-500 hover:bg-violet-500/10 hover:shadow-[0_0_18px_rgba(139,92,246,0.25)] transition-all duration-300"
+        >
+          <Icon
+            icon="mdi:github"
+            class="text-xl text-white group-hover:text-violet-400 group-hover:scale-110 transition-all duration-300"
+          />
+        </a>
+
+        <a
+          href="#"
+          class="group inline-flex size-11 items-center justify-center rounded-xl border border-white/10 hover:-translate-y-1 hover:border-violet-500 hover:bg-violet-500/10 hover:shadow-[0_0_18px_rgba(139,92,246,0.25)] transition-all duration-300"
+        >
+          <Icon
+            icon="ic:baseline-whatsapp"
+            class="text-xl text-green-500 group-hover:text-green-400 group-hover:scale-110 transition-all duration-300"
+          />
+        </a>
+
+        <a
+          href="#"
+          class="group inline-flex size-11 items-center justify-center rounded-xl border border-white/10 hover:-translate-y-1 hover:border-violet-500 hover:bg-violet-500/10 hover:shadow-[0_0_18px_rgba(139,92,246,0.25)] transition-all duration-300"
+        >
+          <Icon
+            icon="streamline-cyber:email-2"
+            class="text-xl text-white group-hover:text-violet-400 group-hover:scale-110 transition-all duration-300"
+          />
+        </a>
+      </div>
+    </div>
+    <div class="relative flex min-h-125 items-end justify-center lg:min-h-140">
+      <div
+        class="absolute bottom-16 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-violet-600/30 blur-3xl"
+      ></div>
+
+      <div
+        class="absolute bottom-8 left-1/2 h-95 w-95 -translate-x-1/2 rounded-[48%_52%_44%_56%/42%_40%_60%_58%] bg-gradient-to-br from-violet-950 via-purple-950 to-violet-900/80 border border-violet-500/20 shadow-[0_0_55px_rgba(124,58,237,0.28)]"
+      ></div>
+
+      <div
+        class="absolute bottom-16 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-gradient-to-t from-violet-600/25 to-transparent blur-2xl"
+      ></div>
+
+      <div class="absolute right-14 top-16 grid grid-cols-3 gap-3 opacity-60">
+        <span class="size-1.5 rounded-full bg-violet-500"></span>
+        <span class="size-1.5 rounded-full bg-violet-500"></span>
+        <span class="size-1.5 rounded-full bg-violet-500"></span>
+        <span class="size-1.5 rounded-full bg-violet-500"></span>
+        <span class="size-1.5 rounded-full bg-violet-500"></span>
+        <span class="size-1.5 rounded-full bg-violet-500"></span>
+        <span class="size-1.5 rounded-full bg-violet-500"></span>
+        <span class="size-1.5 rounded-full bg-violet-500"></span>
+        <span class="size-1.5 rounded-full bg-violet-500"></span>
+      </div>
+
+      <img
+        src="/images/hero/my-image (2).png"
+        alt="Mariana Barreto"
+        class="relative z-10 max-h-[500px] w-auto object-contain drop-shadow-[0_18px_32px_rgba(76,29,149,0.35)] lg:-translate-y-8"
+      />
+      <div
+        class="absolute bottom-7 left-1/2 z-20 h-[2px] w-72 -translate-x-1/2 bg-gradient-to-r from-transparent via-violet-400/80 to-transparent"
+      ></div>
+    </div>
+  </section>
+</template>
