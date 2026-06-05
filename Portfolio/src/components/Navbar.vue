@@ -10,7 +10,7 @@ import { Icon } from "@iconify/vue";
       <div class="flex items-center justify-between w-full">
         <div class="logo">
           <a href="#home" class="font-logo text-3xl font-bold text-white"
-            >Mariana Barreto</a
+            >Mariana</a
           ><span class="text-sm text-gray-400">.dev</span>
         </div>
         <ul

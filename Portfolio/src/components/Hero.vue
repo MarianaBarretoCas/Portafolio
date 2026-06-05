@@ -9,8 +9,8 @@ import { Icon } from "@iconify/vue";
   >
     <div class="info">
       <h3 class="text-violet-400 mb-2 text-sm tracking-widest">HELLO! I'M</h3>
-      <h1 class="text-5xl lg:text-6xl font-bold text-white mb-1">
-        Mariana Barreto
+      <h1 class="text-5xl lg:text-5xl font-bold text-white mb-1">
+        Mariana Barreto Castro
       </h1>
       <h3 class="text-purple-400 font-semibold mb-3">
         Functional Software Analyst & Developer
