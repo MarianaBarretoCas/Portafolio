@@ -6,13 +6,13 @@ import { skills, technologies } from "../data/skills";
 <template>
   <section
     id="skills"
-    class="max-w-7xl mx-auto border-t border-white/10 px-6 py-10 lg:px-8 mt-12"
+    class="max-w-7xl mx-auto border-t border-white/10 px-6 py-10 lg:px-8"
   >
     <div class="grid gap-10 lg:grid-cols-[1.05fr_1.55fr] items-start">
       <div>
         <h2 class="mb-8 text-2xl font-semibold text-white">My Skills</h2>
         <div class="grid gap-5 sm:grid-cols-2">
-          <div v-for="skill in skills" :key="skill.name" class="space-y-2">
+          <div v-for="skill in skills" :key="skill.name" class="space-y-3">
             <div class="flex items-center justify-between text-sm">
               <span class="font-medium text-slate-200 mt-7">
                 {{ skill.name }}
