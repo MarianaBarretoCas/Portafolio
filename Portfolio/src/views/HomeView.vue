@@ -3,7 +3,10 @@ import Navbar from "../components/Navbar.vue";
 import Hero from "../components/Hero.vue";
 import About from "../components/About.vue";
 import Skills from "../components/Skills.vue";
-import ProjectCard from "../components/ProjectCard.vue";
+import Projects from "../components/Projects.vue";
+import Experience from "../components/Experience.vue";
+import Contact from "../components/Contact.vue";
+import Footers from "../components/Footer.vue";
 </script>
 
 <template>
@@ -13,10 +16,12 @@ import ProjectCard from "../components/ProjectCard.vue";
       <hero />
       <about />
       <skills />
-      <project-card />
+      <projects />
+      <experience />
+      <contact />
     </main>
-    <footer class="bg-slate-900 text-center py-4">
-      <p>&copy; 2024 Mariana. All rights reserved.</p>
+    <footer>
+      <footers/>
     </footer>
   </div>
 </template>
