@@ -48,8 +48,8 @@ const navLinks = [
       class="mx-auto transition-all duration-300 ease-out"
       :class="
         isScrolled
-          ? 'max-w-6xl rounded-full border border-border-soft bg-nav px-5 py-3 shadow-[0_12px_40px_rgba(0,0,0,0.35)] backdrop-blur-xl'
-          : 'max-w-7xl rounded-full border border-border-soft bg-nav px-5 py-3 shadow-[0_12px_40px_rgba(0,0,0,0.25)] backdrop-blur-xl md:rounded-none md:border-0 md:bg-transparent md:px-6 md:py-4 md:shadow-none'
+          ? 'max-w-6xl rounded-full border border-border-soft bg-nav px-5 py-3 shadow-nav backdrop-blur-xl'
+          : 'max-w-7xl rounded-full border border-border-soft bg-nav px-5 py-3 shadow-nav backdrop-blur-xl md:rounded-none md:border-0 md:bg-transparent md:px-6 md:py-4 md:shadow-none'
       "
     >
       <div class="flex w-full items-center justify-between">
@@ -61,6 +61,7 @@ const navLinks = [
           >
             Mariana
           </a>
+
           <span class="text-sm text-muted">.dev</span>
         </div>
 
@@ -78,23 +79,21 @@ const navLinks = [
         </ul>
 
         <div class="hidden items-center gap-4 md:flex">
-          <a
-            href="#download-cv"
-            class="group flex items-center gap-2 rounded-xl border border-transparent bg-gradient-to-r from-purple-700 to-violet-700 px-6 py-3 font-medium text-white shadow-md shadow-violet-900/30 transition-all duration-300 hover:-translate-y-1 hover:from-purple-600 hover:to-violet-600 hover:shadow-[0_0_22px_rgba(139,92,246,0.45)]"
-          >
+          <a href="#download-cv" class="btn btn-primary group">
             Download CV
+
             <Icon icon="lucide:download" class="text-lg" />
           </a>
 
           <button
             type="button"
             aria-label="Cambiar tema"
-            class="group inline-flex size-11 items-center justify-center rounded-xl border border-border-soft bg-transparent transition-all duration-300 hover:-translate-y-1 hover:border-yellow-400/50 hover:bg-yellow-400/10 hover:shadow-[0_0_18px_rgba(250,204,21,0.22)]"
+            class="theme-button group"
             @click="toggleTheme"
           >
             <Icon
               :icon="theme === 'dark' ? 'solar:moon-bold-duotone' : 'solar:sun-bold-duotone'"
-              class="text-xl text-yellow-400 transition-all duration-300 group-hover:rotate-12 group-hover:scale-110 group-hover:text-yellow-300"
+              class="text-xl transition-all duration-300 group-hover:rotate-12 group-hover:scale-110"
             />
           </button>
         </div>
@@ -103,7 +102,7 @@ const navLinks = [
           type="button"
           aria-label="Abrir menú"
           :aria-expanded="isMenuOpen"
-          class="inline-flex size-11 items-center justify-center rounded-full border border-border-soft text-content transition-all duration-300 hover:border-violet-500/50 hover:bg-violet-500/10 md:hidden"
+          class="icon-button md:!hidden"
           @click="isMenuOpen = !isMenuOpen"
         >
           <Icon v-if="!isMenuOpen" icon="lucide:menu" class="text-2xl" />
@@ -114,7 +113,7 @@ const navLinks = [
 
     <div
       v-if="isMenuOpen"
-      class="mx-auto mt-3 max-w-7xl rounded-3xl border border-border-soft bg-nav p-4 shadow-[0_12px_40px_rgba(0,0,0,0.35)] backdrop-blur-xl md:hidden"
+      class="mx-auto mt-3 max-w-7xl rounded-3xl border border-border-soft bg-nav p-4 shadow-nav backdrop-blur-xl md:hidden"
     >
       <ul class="space-y-2 text-sm font-medium text-muted">
         <li v-for="link in navLinks" :key="link.name">
@@ -131,22 +130,23 @@ const navLinks = [
       <div class="mt-4 flex items-center gap-3">
         <a
           href="#download-cv"
-          class="group flex flex-1 items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-purple-700 to-violet-700 px-5 py-3 text-sm font-medium text-white shadow-md shadow-violet-900/30 transition-all duration-300 hover:from-purple-600 hover:to-violet-600"
+          class="btn btn-primary group flex-1 text-sm"
           @click="closeMenu"
         >
           Download CV
+
           <Icon icon="lucide:download" class="text-lg" />
         </a>
 
         <button
           type="button"
           aria-label="Cambiar tema"
-          class="inline-flex size-11 items-center justify-center rounded-2xl border border-border-soft text-yellow-400 transition-all duration-300 hover:border-yellow-400/50 hover:bg-yellow-400/10"
+          class="theme-button"
           @click="toggleTheme"
         >
           <Icon
             :icon="theme === 'dark' ? 'solar:moon-bold-duotone' : 'solar:sun-bold-duotone'"
-            class="text-xl text-yellow-400 transition-all duration-300"
+            class="text-xl transition-all duration-300"
           />
         </button>
       </div>

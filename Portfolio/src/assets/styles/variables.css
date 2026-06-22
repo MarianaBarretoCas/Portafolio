@@ -4,12 +4,25 @@
 
   --color-page: var(--page);
   --color-surface: var(--surface);
+  --color-surface-strong: var(--surface-strong);
   --color-card: var(--card);
-  --color-content: var(--content);
-  --color-muted: var(--muted);
-  --color-border-soft: var(--border-soft);
   --color-input: var(--input);
   --color-nav: var(--nav);
+
+  --color-content: var(--content);
+  --color-muted: var(--muted);
+
+  --color-border-soft: var(--border-soft);
+  --color-border-strong: var(--border-strong);
+
+  --color-icon-surface: var(--icon-surface);
+  --color-button-secondary: var(--button-secondary);
+
+  --shadow-soft: var(--app-shadow-soft);
+  --shadow-card: var(--app-shadow-card);
+  --shadow-glow: var(--app-shadow-glow);
+  --shadow-glow-bg: var(--app-shadow-glow-bg);
+  --shadow-nav: var(--app-shadow-nav);
 }
 
 :root {
@@ -17,25 +30,49 @@
 
   --page: #020617;
   --surface: rgba(15, 23, 42, 0.35);
+  --surface-strong: rgba(15, 23, 42, 0.65);
   --card: rgba(2, 6, 23, 0.45);
   --input: rgba(2, 6, 23, 0.45);
   --nav: rgba(2, 6, 23, 0.35);
 
   --content: #ffffff;
   --muted: #cbd5e1;
+
   --border-soft: rgba(255, 255, 255, 0.1);
+  --border-strong: rgba(167, 139, 250, 0.35);
+
+  --icon-surface: rgba(15, 23, 42, 0.45);
+  --button-secondary: rgba(15, 23, 42, 0.35);
+
+  --app-shadow-soft: 0 12px 35px rgba(0, 0, 0, 0.28);
+  --app-shadow-card: 0 16px 45px rgba(0, 0, 0, 0.35);
+  --app-shadow-glow: 0 0 24px rgba(139, 92, 246, 0.28);
+  --app-shadow-glow-bg: 0 0 24px rgba(139, 92, 246, 0.28);
+  --app-shadow-nav: 0 12px 40px rgba(0, 0, 0, 0.35);
 }
 
 .light {
   color-scheme: light;
 
-  --page: #f8fafc;
-  --surface: rgba(255, 255, 255, 0.78);
-  --card: rgba(255, 255, 255, 0.88);
-  --input: rgba(255, 255, 255, 0.85);
-  --nav: rgba(255, 255, 255, 0.35);
+  --page: #f5f7fb;
+  --surface: rgba(255, 255, 255, 0.72);
+  --surface-strong: rgba(255, 255, 255, 0.92);
+  --card: rgba(255, 255, 255, 0.9);
+  --input: rgba(255, 255, 255, 0.88);
+  --nav: rgba(255, 255, 255, 0.45);
 
   --content: #0f172a;
   --muted: #475569;
-  --border-soft: rgba(15, 23, 42, 0.12);
+
+  --border-soft: rgba(15, 23, 42, 0.233);
+  --border-strong: rgba(124, 58, 237, 0.35);
+
+  --icon-surface: rgba(255, 255, 255, 0.678);
+  --button-secondary: rgba(255, 255, 255, 0.72);
+
+  --app-shadow-soft: 0 10px 24px rgba(15, 23, 42, 0.12);
+  --app-shadow-card: 0 18px 45px rgba(15, 23, 42, 0.18);
+  --app-shadow-glow: 0 16px 36px rgba(124, 58, 237, 0.3);
+  --app-shadow-glow-bg: 0 14px 70px rgb(165, 37, 250);
+  --app-shadow-nav: 0 16px 40px rgba(15, 23, 42, 0.14);
 }

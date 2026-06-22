@@ -18,3 +18,143 @@ body {
 #app {
   min-height: 100vh;
 }
+
+/*Small repeted components*/
+
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-0.25rem);
+}
+
+.btn-primary {
+  border: 1px solid transparent;
+  background: linear-gradient(to right, #7e22ce, #6d28d9);
+  color: #ffffff;
+  box-shadow: var(--app-shadow-soft);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(to right, #9333ea, #7c3aed);
+  box-shadow: var(--app-shadow-glow);
+}
+
+.btn-secondary {
+  border: 1px solid var(--border-strong);
+  background: var(--button-secondary);
+  color: var(--content);
+  box-shadow: var(--app-shadow-soft);
+  backdrop-filter: blur(16px);
+}
+
+.btn-secondary:hover {
+  border-color: rgba(167, 139, 250, 0.85);
+  background: rgba(139, 92, 246, 0.1);
+  box-shadow: var(--app-shadow-glow);
+}
+
+.icon-button {
+  display: inline-flex;
+  width: 2.75rem;
+  height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.75rem;
+  border: 1px solid var(--border-soft);
+  background: var(--icon-surface);
+  box-shadow: var(--app-shadow-soft);
+  backdrop-filter: blur(16px);
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.icon-button:hover {
+  transform: translateY(-0.25rem);
+  border-color: rgba(139, 92, 246, 0.75);
+  box-shadow: var(--app-shadow-glow);
+}
+
+.theme-button {
+  display: inline-flex;
+  width: 2.75rem;
+  height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.75rem;
+  border: 1px solid var(--border-soft);
+  background: var(--icon-surface);
+  color: #facc15;
+  box-shadow: var(--app-shadow-soft);
+  backdrop-filter: blur(16px);
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.theme-button:hover {
+  transform: translateY(-0.25rem);
+  border-color: rgba(250, 204, 21, 0.65);
+  background: rgba(250, 204, 21, 0.1);
+  box-shadow: var(--app-shadow-glow);
+}
+
+.glass-card {
+  border: 1px solid var(--border-soft);
+  background: var(--card);
+  box-shadow: var(--app-shadow-card);
+  backdrop-filter: blur(18px);
+}
+
+.glass-surface {
+  border: 1px solid var(--border-soft);
+  background: var(--surface);
+  box-shadow: var(--app-shadow-soft);
+  backdrop-filter: blur(18px);
+}
+
+.input-field {
+  width: 100%;
+  border-radius: 1rem;
+  border: 1px solid var(--border-soft);
+  background: var(--input);
+  color: var(--content);
+  box-shadow: var(--app-shadow-soft);
+  outline: none;
+  backdrop-filter: blur(16px);
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.input-field::placeholder {
+  color: var(--muted);
+}
+
+.input-field:focus {
+  border-color: rgba(139, 92, 246, 0.75);
+  box-shadow: var(--app-shadow-glow);
+}
