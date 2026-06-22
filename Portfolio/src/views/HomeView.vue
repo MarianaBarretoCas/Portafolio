@@ -10,9 +10,9 @@ import Footers from "../components/Footer.vue";
 </script>
 
 <template>
-  <div id="body" class="min-h-screen bg-slate-950 text-white">
+  <div class="min-h-screen bg-page text-content font-sans transition-colors duration-300">
     <navbar />
-    <main class="space-y-12">
+    <main class="space-y-12 lg:px-17">
       <hero />
       <about />
       <skills />
@@ -24,4 +24,5 @@ import Footers from "../components/Footer.vue";
       <footers/>
     </footer>
   </div>
+  
 </template>

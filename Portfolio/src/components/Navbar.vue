@@ -1,9 +1,12 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
 import { Icon } from "@iconify/vue";
+import { useTheme } from "../composables/useTheme";
 
 const isMenuOpen = ref(false);
 const isScrolled = ref(false);
+
+const { theme, toggleTheme } = useTheme();
 
 const closeMenu = () => {
   isMenuOpen.value = false;
@@ -34,40 +37,40 @@ const navLinks = [
 
 <template>
   <header
-    class="sticky z-50 border-b-0 bg-transparent transition-all duration-500 ease-out"
+    class="sticky z-50 bg-transparent transition-all duration-500 ease-out"
     :class="
       isScrolled
         ? 'top-3 px-4 md:top-4'
-        : 'top-3 px-4 md:top-0 md:px-0 md:bg-slate-950/80 md:backdrop-blur'
+        : 'top-3 px-4 md:top-0 md:px-0 md:bg-nav md:backdrop-blur'
     "
   >
     <nav
       class="mx-auto transition-all duration-300 ease-out"
       :class="
         isScrolled
-          ? 'max-w-6xl rounded-full border border-white/10 bg-slate-950/20 px-5 py-3 shadow-[0_12px_40px_rgba(0,0,0,0.35)] backdrop-blur-xl'
-          : 'max-w-7xl rounded-full border border-white/10 bg-slate-950/80 px-5 py-3 shadow-[0_12px_40px_rgba(0,0,0,0.25)] backdrop-blur-xl md:rounded-none md:border-0 md:bg-transparent md:px-6 md:py-4 md:shadow-none'
+          ? 'max-w-6xl rounded-full border border-border-soft bg-nav px-5 py-3 shadow-[0_12px_40px_rgba(0,0,0,0.35)] backdrop-blur-xl'
+          : 'max-w-7xl rounded-full border border-border-soft bg-nav px-5 py-3 shadow-[0_12px_40px_rgba(0,0,0,0.25)] backdrop-blur-xl md:rounded-none md:border-0 md:bg-transparent md:px-6 md:py-4 md:shadow-none'
       "
     >
       <div class="flex w-full items-center justify-between">
         <div class="logo">
           <a
             href="#home"
-            class="font-logo text-3xl font-bold text-white"
+            class="font-logo text-3xl font-bold text-content"
             @click="closeMenu"
           >
             Mariana
           </a>
-          <span class="text-sm text-gray-400">.dev</span>
+          <span class="text-sm text-muted">.dev</span>
         </div>
 
         <ul
-          class="hidden items-center gap-8 text-sm font-medium text-slate-300 md:flex"
+          class="hidden items-center gap-8 text-sm font-medium text-muted md:flex"
         >
           <li v-for="link in navLinks" :key="link.name">
             <a
               :href="link.href"
-              class="relative py-2 transition-colors duration-300 hover:text-white after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:bg-gradient-to-r after:from-purple-500 after:to-violet-400 after:transition-transform after:duration-300 hover:after:scale-x-100"
+              class="relative py-2 transition-colors duration-300 hover:text-content after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:bg-gradient-to-r after:from-purple-500 after:to-violet-400 after:transition-transform after:duration-300 hover:after:scale-x-100"
             >
               {{ link.name }}
             </a>
@@ -86,10 +89,11 @@ const navLinks = [
           <button
             type="button"
             aria-label="Cambiar tema"
-            class="group inline-flex size-11 items-center justify-center rounded-xl border border-white/10 bg-transparent transition-all duration-300 hover:-translate-y-1 hover:border-yellow-400/50 hover:bg-yellow-400/10 hover:shadow-[0_0_18px_rgba(250,204,21,0.22)]"
+            class="group inline-flex size-11 items-center justify-center rounded-xl border border-border-soft bg-transparent transition-all duration-300 hover:-translate-y-1 hover:border-yellow-400/50 hover:bg-yellow-400/10 hover:shadow-[0_0_18px_rgba(250,204,21,0.22)]"
+            @click="toggleTheme"
           >
             <Icon
-              icon="solar:moon-bold-duotone"
+              :icon="theme === 'dark' ? 'solar:moon-bold-duotone' : 'solar:sun-bold-duotone'"
               class="text-xl text-yellow-400 transition-all duration-300 group-hover:rotate-12 group-hover:scale-110 group-hover:text-yellow-300"
             />
           </button>
@@ -99,7 +103,7 @@ const navLinks = [
           type="button"
           aria-label="Abrir menú"
           :aria-expanded="isMenuOpen"
-          class="inline-flex size-11 items-center justify-center rounded-full border border-white/10 text-white transition-all duration-300 hover:border-violet-500/50 hover:bg-violet-500/10 md:hidden"
+          class="inline-flex size-11 items-center justify-center rounded-full border border-border-soft text-content transition-all duration-300 hover:border-violet-500/50 hover:bg-violet-500/10 md:hidden"
           @click="isMenuOpen = !isMenuOpen"
         >
           <Icon v-if="!isMenuOpen" icon="lucide:menu" class="text-2xl" />
@@ -110,13 +114,13 @@ const navLinks = [
 
     <div
       v-if="isMenuOpen"
-      class="mx-auto mt-3 max-w-7xl rounded-3xl border border-white/10 bg-slate-950/20 p-4 shadow-[0_12px_40px_rgba(0,0,0,0.35)] backdrop-blur-xl md:hidden"
+      class="mx-auto mt-3 max-w-7xl rounded-3xl border border-border-soft bg-nav p-4 shadow-[0_12px_40px_rgba(0,0,0,0.35)] backdrop-blur-xl md:hidden"
     >
-      <ul class="space-y-2 text-sm font-medium text-slate-40">
+      <ul class="space-y-2 text-sm font-medium text-muted">
         <li v-for="link in navLinks" :key="link.name">
           <a
             :href="link.href"
-            class="block rounded-2xl px-4 py-3 transition-all duration-300 hover:border-violet-500/50 hover:bg-violet-500/10 active:scale-95 active:border-violet-500 active:bg-violet-500/20 hover:text-white"
+            class="block rounded-2xl px-4 py-3 transition-all duration-300 hover:border-violet-500/50 hover:bg-violet-500/10 hover:text-content active:scale-95 active:border-violet-500 active:bg-violet-500/20"
             @click="closeMenu"
           >
             {{ link.name }}
@@ -137,15 +141,20 @@ const navLinks = [
         <button
           type="button"
           aria-label="Cambiar tema"
-          class="inline-flex size-11 items-center justify-center rounded-2xl border border-white/10 text-yellow-400 transition-all duration-300 hover:border-yellow-400/50 hover:bg-yellow-400/10"
+          class="inline-flex size-11 items-center justify-center rounded-2xl border border-border-soft text-yellow-400 transition-all duration-300 hover:border-yellow-400/50 hover:bg-yellow-400/10"
+          @click="toggleTheme"
         >
-          <Icon icon="solar:moon-bold-duotone" class="text-xl" />
+          <Icon
+            :icon="theme === 'dark' ? 'solar:moon-bold-duotone' : 'solar:sun-bold-duotone'"
+            class="text-xl text-yellow-400 transition-all duration-300"
+          />
         </button>
       </div>
     </div>
+
     <div
       v-if="!isScrolled"
-      class="pointer-events-none hidden h-px w-full bg-white/10 md:block"
+      class="pointer-events-none hidden h-px w-full bg-border-soft md:block"
     ></div>
   </header>
 </template>

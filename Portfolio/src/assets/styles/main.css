@@ -1,9 +1,5 @@
 @import "tailwindcss";
-
-@theme {
-  --font-logo: "Dancing Script", cursive;
-  --font-sans: "Inter", sans-serif;
-}
+@import "./variables.css";
 
 html {
   scroll-behavior: smooth;
@@ -14,6 +10,9 @@ body {
   margin: 0;
   min-width: 320px;
   font-family: var(--font-sans);
+  background: var(--page);
+  color: var(--content);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 #app {

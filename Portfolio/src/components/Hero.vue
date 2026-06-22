@@ -4,10 +4,10 @@ import { Icon } from "@iconify/vue";
 
 <template>
   <section
-    id="home"
-    class="max-w-7xl mt-2 mx-auto px-6 py-5 grid lg:grid-cols-2 items-center gap-12 text-center lg:text-left lg:-translate-y-16 lg:-mb-16"
-  >
-    <div class="info ">
+  id="home"
+  class="max-w-7xl mx-auto px-6 pt-12 pb-16 grid items-center gap-10 text-center lg:grid-cols-2 lg:text-left lg:pt-5 lg:pb-5 lg:min-h-screen lg:-translate-y-16 lg:-mb-16"
+>
+    <div class="info flex flex-col items-center lg:items-start">
       <h3 class="text-violet-400 mb-2 text-sm tracking-widest">HELLO! I'M</h3>
       <h1 class="text-4xl sm:text-5xl lg:text-5xl font-bold text-white mb-1">
         Mariana Barreto Castro
@@ -19,7 +19,7 @@ import { Icon } from "@iconify/vue";
         I help businesses and teams turn ideas into effective digital solutions
         with code, analysis and a user-focused mindset.
       </p>
-      <div class="flex flex-col gap-4 mt-8 sm:flex-row sm:items-center">
+      <div class="flex flex-col items-center justify-center gap-4 mt-8 sm:flex-row lg:justify-start">
         <a
           href="#projects"
           class="group flex items-center justify-center text-center gap-2 border border-transparent bg-gradient-to-r from-purple-700 to-violet-700 text-white font-medium py-3 px-6 rounded-xl shadow-md shadow-violet-900/30 hover:-translate-y-1 hover:from-purple-600 hover:to-violet-600 hover:shadow-[0_0_22px_rgba(139,92,246,0.45)] transition-all duration-300"

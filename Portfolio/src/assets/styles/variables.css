@@ -1,0 +1,41 @@
+@theme {
+  --font-logo: "Dancing Script", cursive;
+  --font-sans: "Inter", sans-serif;
+
+  --color-page: var(--page);
+  --color-surface: var(--surface);
+  --color-card: var(--card);
+  --color-content: var(--content);
+  --color-muted: var(--muted);
+  --color-border-soft: var(--border-soft);
+  --color-input: var(--input);
+  --color-nav: var(--nav);
+}
+
+:root {
+  color-scheme: dark;
+
+  --page: #020617;
+  --surface: rgba(15, 23, 42, 0.35);
+  --card: rgba(2, 6, 23, 0.45);
+  --input: rgba(2, 6, 23, 0.45);
+  --nav: rgba(2, 6, 23, 0.35);
+
+  --content: #ffffff;
+  --muted: #cbd5e1;
+  --border-soft: rgba(255, 255, 255, 0.1);
+}
+
+.light {
+  color-scheme: light;
+
+  --page: #f8fafc;
+  --surface: rgba(255, 255, 255, 0.78);
+  --card: rgba(255, 255, 255, 0.88);
+  --input: rgba(255, 255, 255, 0.85);
+  --nav: rgba(255, 255, 255, 0.35);
+
+  --content: #0f172a;
+  --muted: #475569;
+  --border-soft: rgba(15, 23, 42, 0.12);
+}
