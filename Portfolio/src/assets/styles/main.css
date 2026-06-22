@@ -124,7 +124,6 @@ body {
 .glass-card {
   border: 1px solid var(--border-soft);
   background: var(--card);
-  box-shadow: var(--app-shadow-card);
   backdrop-filter: blur(18px);
 }
 

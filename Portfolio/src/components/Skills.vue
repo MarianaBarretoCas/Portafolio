@@ -13,7 +13,7 @@ const toggleCard = (title) => {
 <template>
   <section
     id="skills"
-    class="relative mx-auto max-w-7xl border-t border-white/10 px-6 py-16 lg:px-18"
+    class="relative mx-auto max-w-7xl border-t border-border-soft px-6 py-16 lg:px-18"
   >
     <div class="mb-10 text-center">
       <span
@@ -22,11 +22,11 @@ const toggleCard = (title) => {
         My expertise
       </span>
 
-      <h2 class="mt-3 text-3xl font-bold text-white sm:text-4xl">
+      <h2 class="mt-3 text-3xl font-bold text-content sm:text-4xl">
         Skills & Technologies
       </h2>
 
-      <p class="mx-auto mt-3 max-w-xl text-sm text-slate-400 sm:text-base">
+      <p class="mx-auto mt-3 max-w-xl text-sm text-muted sm:text-base">
         Technologies and skills I use to transform ideas into functional digital
         solutions.
       </p>
@@ -50,8 +50,9 @@ const toggleCard = (title) => {
             '[transform:rotateY(180deg)]': activeCard === group.title,
           }"
         >
+          <!-- Parte frontal -->
           <div
-            class="absolute inset-0 overflow-hidden rounded-3xl border border-white/10 bg-slate-950/50 p-6 [backface-visibility:hidden]"
+            class="absolute inset-0 overflow-hidden rounded-3xl border border-border-soft bg-feature-card p-6 shadow-soft backdrop-blur-xl transition-all duration-300 [backface-visibility:hidden] group-hover:border-violet-500/50 group-hover:bg-feature-card-hover group-hover:shadow-glow"
           >
             <div
               class="absolute -right-10 -top-10 size-36 rounded-full opacity-10 blur-3xl"
@@ -61,7 +62,7 @@ const toggleCard = (title) => {
             <div class="relative flex h-full flex-col">
               <div class="mb-6 flex items-center gap-4">
                 <div
-                  class="flex size-12 shrink-0 items-center justify-center rounded-2xl"
+                  class="flex size-12 shrink-0 items-center justify-center rounded-2xl shadow-soft"
                   :style="{
                     color: group.color,
                     backgroundColor: `${group.color}18`,
@@ -71,11 +72,11 @@ const toggleCard = (title) => {
                 </div>
 
                 <div>
-                  <h3 class="font-semibold text-white">
+                  <h3 class="font-semibold text-content">
                     {{ group.title }}
                   </h3>
 
-                  <span class="text-xs text-slate-500">
+                  <span class="text-xs text-muted">
                     {{ group.subtitle }}
                   </span>
                 </div>
@@ -85,7 +86,7 @@ const toggleCard = (title) => {
                 <div
                   v-for="technology in group.technologies"
                   :key="technology.name"
-                  class="flex items-center gap-2 rounded-xl border border-white/10 bg-white/[0.04] px-3 py-2"
+                  class="flex items-center gap-2 rounded-xl border border-border-soft bg-icon-surface px-3 py-2 shadow-soft backdrop-blur-md"
                 >
                   <Icon
                     v-if="technology.icon"
@@ -93,14 +94,14 @@ const toggleCard = (title) => {
                     class="text-lg"
                   />
 
-                  <span class="text-xs font-medium text-slate-300">
+                  <span class="text-xs font-medium text-muted">
                     {{ technology.name }}
                   </span>
                 </div>
               </div>
 
               <div
-                class="mt-auto flex items-center gap-2 pt-5 text-xs text-slate-500"
+                class="mt-auto flex items-center gap-2 pt-5 text-xs text-muted"
               >
                 <Icon icon="lucide:rotate-3d" class="text-sm" />
 
@@ -113,15 +114,15 @@ const toggleCard = (title) => {
 
           <!-- Parte trasera -->
           <div
-            class="absolute inset-0 overflow-hidden rounded-3xl border p-6 [backface-visibility:hidden] [transform:rotateY(180deg)]"
+            class="absolute inset-0 overflow-hidden rounded-3xl border p-6 shadow-glow backdrop-blur-xl [backface-visibility:hidden] [transform:rotateY(180deg)]"
             :style="{
               borderColor: `${group.color}55`,
-              background: `linear-gradient(145deg, ${group.color}20, rgba(2, 6, 23, 0.96) 65%)`,
+              background: `linear-gradient(145deg, ${group.color}20, var(--feature-card-hover) 68%)`,
             }"
           >
             <div class="flex h-full flex-col justify-center">
               <div
-                class="mb-5 flex size-12 items-center justify-center rounded-2xl"
+                class="mb-5 flex size-12 items-center justify-center rounded-2xl shadow-soft"
                 :style="{
                   color: group.color,
                   backgroundColor: `${group.color}18`,
@@ -130,11 +131,11 @@ const toggleCard = (title) => {
                 <Icon :icon="group.icon" class="text-2xl" />
               </div>
 
-              <h3 class="mb-3 text-xl font-semibold text-white">
+              <h3 class="mb-3 text-xl font-semibold text-content">
                 {{ group.title }}
               </h3>
 
-              <p class="text-sm leading-7 text-slate-300">
+              <p class="text-sm leading-7 text-muted">
                 {{ group.description }}
               </p>
 

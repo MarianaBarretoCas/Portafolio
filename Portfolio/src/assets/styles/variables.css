@@ -33,6 +33,7 @@
 --color-icon-yellow-surface: var(--icon-yellow-surface);
 
 --shadow-panel: var(--app-shadow-panel);
+--shadow-project-hover: var(--app-shadow-project-hover);
 }
 
 :root {
@@ -71,6 +72,7 @@
 --icon-yellow-surface: rgba(250, 204, 21, 0.16);
 
 --app-shadow-panel: 0 18px 50px rgba(0, 0, 0, 0.28);
+--app-shadow-project-hover: 0 18px 30px rgba(142, 29, 248, 0.479);
 
 }
 
@@ -94,9 +96,9 @@
   --button-secondary: rgba(255, 255, 255, 0.72);
 
   --app-shadow-soft: 0 10px 24px rgba(15, 23, 42, 0.12);
-  --app-shadow-card: 0 18px 45px rgba(15, 23, 42, 0.18);
+  --app-shadow-card: 0 18px 45px rgba(0, 12, 80, 0.18);
   --app-shadow-glow: 0 16px 36px rgba(124, 58, 237, 0.3);
-  --app-shadow-glow-bg: 0 14px 70px rgb(165, 37, 250);
+  --app-shadow-glow-bg: 0 14px 70px rgba(165, 37, 250, 0.562);
   --app-shadow-nav: 0 16px 40px rgba(15, 23, 42, 0.14);
 
   --panel: rgba(255, 255, 255, 0.72);
@@ -110,4 +112,5 @@
 --icon-yellow-surface: rgba(234, 179, 8, 0.14);
 
 --app-shadow-panel: 0 18px 45px rgba(15, 23, 42, 0.12);
+--app-shadow-project-hover: 0 18px 50px rgba(142, 29, 248, 0.541);
 }

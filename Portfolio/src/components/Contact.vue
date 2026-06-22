@@ -1,16 +1,20 @@
 <script setup>
 import { Icon } from "@iconify/vue";
 </script>
+
 <template>
   <section
     id="contact"
-    class="scroll-mt-32 max-w-7xl mx-auto border-t border-white/10 px-6 pt-14 pb-20 lg:px-8"
+    class="mx-auto max-w-7xl scroll-mt-32 px-6 pt-14 pb-20 lg:px-8"
   >
-    <div class="rounded-2xl border border-white/10 bg-slate-900/20 p-6 lg:p-8">
+    <div class="glass-surface rounded-3xl p-6 lg:p-8">
       <div class="grid gap-10 lg:grid-cols-[0.9fr_1.4fr]">
         <div>
-          <h2 class="mb-3 text-2xl font-semibold text-white">Let's Connect!</h2>
-          <p class="mb-8 max-w-md text-sm leading-relaxed text-slate-300">
+          <h2 class="mb-3 text-2xl font-semibold text-content">
+            Let's Connect!
+          </h2>
+
+          <p class="mb-8 max-w-md text-sm leading-relaxed text-muted">
             I'd love to hear about your project, opportunity or idea. Feel free
             to contact me through any of these channels.
           </p>
@@ -18,106 +22,113 @@ import { Icon } from "@iconify/vue";
           <div class="space-y-4">
             <a
               href="mailto:marianabarretocas@gmail.com"
-              class="group flex items-center gap-4 text-sm text-slate-300 transition-colors hover:text-white"
+              class="group flex items-center gap-4 text-sm text-muted transition-colors duration-300 hover:text-content"
             >
               <span
-                class="inline-flex size-10 items-center justify-center rounded-xl border border-white/10 bg-slate-950/40 text-violet-400 group-hover:border-violet-500/50 group-hover:bg-violet-500/10 group-hover:text-white transition-all duration-300"
+                class="icon-button !size-10 shrink-0 group-hover:border-violet-500/50 group-hover:bg-violet-500/10 group-hover:!shadow-glow"
               >
-                <Icon icon="lucide:mail" class="text-xl" />
+                <Icon
+                  icon="lucide:mail"
+                  class="text-xl text-violet-400 transition-all duration-300 group-hover:scale-110 group-hover:text-violet-300"
+                />
               </span>
 
-              marianabarretocas@gmail.com
+              <span class="break-all">marianabarretocas@gmail.com</span>
             </a>
 
-            <div class="flex items-center gap-4 text-sm text-slate-300">
-              <span
-                class="inline-flex size-10 items-center justify-center rounded-xl border border-white/10 bg-slate-950/40 text-violet-400"
-              >
-                <Icon icon="lucide:map-pin" class="text-xl" />
+            <div class="flex items-center gap-4 text-sm text-muted">
+              <span class="icon-button !size-10 shrink-0">
+                <Icon icon="lucide:map-pin" class="text-xl text-violet-400" />
               </span>
 
-              Bogotá, Colombia
+              <span>Bogotá, Colombia</span>
             </div>
 
             <a
               href="https://linkedin.com/in/mariana-barreto-castro"
-              class="group flex items-center gap-4 text-sm text-slate-300 transition-colors hover:text-white"
+              class="group flex items-center gap-4 text-sm text-muted transition-colors duration-300 hover:text-content"
               target="_blank"
             >
               <span
-                class="inline-flex size-10 items-center justify-center rounded-xl border border-white/10 bg-slate-950/40 text-violet-400 group-hover:border-violet-500/50 group-hover:bg-violet-500/10 group-hover:text-white transition-all duration-300"
+                class="icon-button !size-10 shrink-0 group-hover:border-violet-500/50 group-hover:bg-violet-500/10 group-hover:!shadow-glow"
               >
-                <Icon icon="mdi:linkedin" class="text-xl" />
+                <Icon
+                  icon="mdi:linkedin"
+                  class="text-xl text-violet-400 transition-all duration-300 group-hover:scale-110 group-hover:text-violet-300"
+                />
               </span>
 
-              linkedin.com/in/mariana-barreto-castro
+              <span class="break-all">linkedin.com/in/mariana-barreto-castro</span>
             </a>
 
             <a
               href="https://github.com/MarianaBarretoCas"
-              class="group flex items-center gap-4 text-sm text-slate-300 transition-colors hover:text-white"
+              class="group flex items-center gap-4 text-sm text-muted transition-colors duration-300 hover:text-content"
               target="_blank"
             >
               <span
-                class="inline-flex size-10 items-center justify-center rounded-xl border border-white/10 bg-slate-950/40 text-violet-400 group-hover:border-violet-500/50 group-hover:bg-violet-500/10 group-hover:text-white transition-all duration-300"
+                class="icon-button !size-10 shrink-0 group-hover:border-violet-500/50 group-hover:bg-violet-500/10 group-hover:!shadow-glow"
               >
-                <Icon icon="mdi:github" class="text-xl" />
+                <Icon
+                  icon="mdi:github"
+                  class="text-xl text-violet-400 transition-all duration-300 group-hover:scale-110 group-hover:text-violet-300"
+                />
               </span>
 
-              github.com/MarianaBarretoCas
+              <span class="break-all">github.com/MarianaBarretoCas</span>
             </a>
 
             <a
               href="#"
-              class="group flex items-center gap-4 text-sm text-slate-300 transition-colors hover:text-white"
+              class="group flex items-center gap-4 text-sm text-muted transition-colors duration-300 hover:text-content"
             >
               <span
-                class="inline-flex size-10 items-center justify-center rounded-xl border border-white/10 bg-slate-950/40 text-violet-400 group-hover:border-violet-500/50 group-hover:bg-violet-500/10 group-hover:text-white transition-all duration-300"
+                class="icon-button !size-10 shrink-0 group-hover:border-violet-500/50 group-hover:bg-violet-500/10 group-hover:!shadow-glow"
               >
-                <Icon icon="mdi:whatsapp" class="text-xl" />
+                <Icon
+                  icon="mdi:whatsapp"
+                  class="text-xl text-violet-400 transition-all duration-300 group-hover:scale-110 group-hover:text-violet-300"
+                />
               </span>
 
-              +57 312 466 9522
+              <span>+57 312 466 9522</span>
             </a>
           </div>
         </div>
 
-        <!-- Contact form -->
-        <form class="space-y-4 mt-6">
+        <form class="mt-6 space-y-4">
           <div class="grid gap-4 md:grid-cols-2">
             <input
               type="text"
               placeholder="Your name"
-              class="w-full rounded-xl border border-white/10 bg-slate-950/40 px-4 py-5 text-sm text-white placeholder:text-slate-500 outline-none transition-all focus:border-violet-500/70 focus:ring-2 focus:ring-violet-500/20"
+              class="input-field px-4 py-5 text-sm"
             />
 
             <input
               type="email"
               placeholder="Your email"
-              class="w-full rounded-xl border border-white/10 bg-slate-950/40 px-4 py-5 text-sm text-white placeholder:text-slate-500 outline-none transition-all focus:border-violet-500/70 focus:ring-2 focus:ring-violet-500/20"
+              class="input-field px-4 py-5 text-sm"
             />
           </div>
 
           <input
             type="text"
             placeholder="Subject"
-            class="w-full rounded-xl border border-white/10 bg-slate-950/40 px-4 py-5 text-sm text-white placeholder:text-slate-500 outline-none transition-all focus:border-violet-500/70 focus:ring-2 focus:ring-violet-500/20"
+            class="input-field px-4 py-5 text-sm"
           />
 
           <textarea
             rows="6"
             placeholder="Message"
-            class="w-full resize-none rounded-xl border border-white/10 bg-slate-950/40 px-4 py-3 text-sm text-white placeholder:text-slate-500 outline-none transition-all focus:border-violet-500/70 focus:ring-2 focus:ring-violet-500/20"
+            class="input-field resize-none px-4 py-3 text-sm"
           ></textarea>
 
-          <button
-            type="button"
-            class="group flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-purple-700 to-violet-700 px-6 py-3 text-sm font-medium text-white shadow-md shadow-violet-900/30 hover:-translate-y-1 hover:from-purple-600 hover:to-violet-600 hover:shadow-[0_0_22px_rgba(139,92,246,0.45)] transition-all duration-300"
-          >
+          <button type="button" class="btn btn-primary group w-full">
             <Icon
               icon="lucide:send"
-              class="text-lg group-hover:translate-x-1 transition-transform duration-300"
+              class="text-lg transition-transform duration-300 group-hover:translate-x-1"
             />
+
             Send Message
           </button>
         </form>
