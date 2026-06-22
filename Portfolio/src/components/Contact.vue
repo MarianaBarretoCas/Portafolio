@@ -1,11 +1,37 @@
 <script setup>
+import { reactive } from "vue";
 import { Icon } from "@iconify/vue";
+
+const form = reactive({
+  name: "",
+  email: "",
+  subject: "",
+  message: "",
+});
+
+const handleSubmit = () => {
+  const to = "marianabarretocas@gmail.com";
+
+  const subject = encodeURIComponent(
+    form.subject || "New message from portfolio"
+  );
+
+  const body = encodeURIComponent(
+    `Name: ${form.name}
+Email: ${form.email}
+
+Message:
+${form.message}`
+  );
+
+  window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+};
 </script>
 
 <template>
   <section
     id="contact"
-    class="mx-auto max-w-7xl scroll-mt-32 px-6 pt-14 pb-20 lg:px-8"
+    class="mx-auto max-w-7xl scroll-mt-32 border-t border-border-soft px-6 pt-14 pb-20 lg:px-8"
   >
     <div class="glass-surface rounded-3xl p-6 lg:p-8">
       <div class="grid gap-10 lg:grid-cols-[0.9fr_1.4fr]">
@@ -48,6 +74,7 @@ import { Icon } from "@iconify/vue";
               href="https://linkedin.com/in/mariana-barreto-castro"
               class="group flex items-center gap-4 text-sm text-muted transition-colors duration-300 hover:text-content"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <span
                 class="icon-button !size-10 shrink-0 group-hover:border-violet-500/50 group-hover:bg-violet-500/10 group-hover:!shadow-glow"
@@ -58,13 +85,16 @@ import { Icon } from "@iconify/vue";
                 />
               </span>
 
-              <span class="break-all">linkedin.com/in/mariana-barreto-castro</span>
+              <span class="break-all">
+                linkedin.com/in/mariana-barreto-castro
+              </span>
             </a>
 
             <a
               href="https://github.com/MarianaBarretoCas"
               class="group flex items-center gap-4 text-sm text-muted transition-colors duration-300 hover:text-content"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <span
                 class="icon-button !size-10 shrink-0 group-hover:border-violet-500/50 group-hover:bg-violet-500/10 group-hover:!shadow-glow"
@@ -79,8 +109,10 @@ import { Icon } from "@iconify/vue";
             </a>
 
             <a
-              href="#"
+              href="https://wa.me/573124669522?text=Hello%20Mariana%2C%20I%20saw%20your%20portfolio%20and%20I%20would%20like%20to%20contact%20you."
               class="group flex items-center gap-4 text-sm text-muted transition-colors duration-300 hover:text-content"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <span
                 class="icon-button !size-10 shrink-0 group-hover:border-violet-500/50 group-hover:bg-violet-500/10 group-hover:!shadow-glow"
@@ -96,34 +128,42 @@ import { Icon } from "@iconify/vue";
           </div>
         </div>
 
-        <form class="mt-6 space-y-4">
+        <form class="mt-6 space-y-4" @submit.prevent="handleSubmit">
           <div class="grid gap-4 md:grid-cols-2">
             <input
+              v-model="form.name"
               type="text"
               placeholder="Your name"
+              required
               class="input-field px-4 py-5 text-sm"
             />
 
             <input
+              v-model="form.email"
               type="email"
               placeholder="Your email"
+              required
               class="input-field px-4 py-5 text-sm"
             />
           </div>
 
           <input
+            v-model="form.subject"
             type="text"
             placeholder="Subject"
+            required
             class="input-field px-4 py-5 text-sm"
           />
 
           <textarea
+            v-model="form.message"
             rows="6"
             placeholder="Message"
+            required
             class="input-field resize-none px-4 py-3 text-sm"
           ></textarea>
 
-          <button type="button" class="btn btn-primary group w-full">
+          <button type="submit" class="btn btn-primary group w-full">
             <Icon
               icon="lucide:send"
               class="text-lg transition-transform duration-300 group-hover:translate-x-1"

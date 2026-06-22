@@ -13,10 +13,11 @@ import ProjectCard from "./ProjectCard.vue";
       </h2>
 
       <a
-        href="#"
+        href="https://github.com/MarianaBarretoCas"
+        target="_blank"
         class="text-sm font-medium text-violet-500 transition-colors duration-300 hover:text-violet-400"
       >
-        View all projects →
+        Go to git hub →
       </a>
     </div>
 

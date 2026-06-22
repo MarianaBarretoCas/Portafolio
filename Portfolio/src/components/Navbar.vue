@@ -5,11 +5,18 @@ import { useTheme } from "../composables/useTheme";
 
 const isMenuOpen = ref(false);
 const isScrolled = ref(false);
+const isCvMenuOpen = ref(false);
 
 const { theme, toggleTheme } = useTheme();
 
+
 const closeMenu = () => {
   isMenuOpen.value = false;
+  isCvMenuOpen.value = false;
+};
+
+const toggleCvMenu = () => {
+  isCvMenuOpen.value = !isCvMenuOpen.value;
 };
 
 const handleScroll = () => {
@@ -79,11 +86,44 @@ const navLinks = [
         </ul>
 
         <div class="hidden items-center gap-4 md:flex">
-          <a href="#download-cv" class="btn btn-primary group">
-            Download CV
+          <div class="relative">
+  <button
+    type="button"
+    class="btn btn-primary group"
+    @click="toggleCvMenu"
+  >
+    Download CV
 
-            <Icon icon="lucide:download" class="text-lg" />
-          </a>
+    <Icon
+      icon="lucide:chevron-down"
+      class="text-lg transition-transform duration-300"
+      :class="{ 'rotate-180': isCvMenuOpen }"
+    />
+  </button>
+
+  <div
+    v-if="isCvMenuOpen"
+    class="absolute right-0 top-full z-50 mt-3 w-48 overflow-hidden rounded-2xl border border-border-soft bg-nav p-2 shadow-nav backdrop-blur-xl"
+  >
+    <a
+      href="/cv/mariana-barreto-cv-en.pdf"
+      download
+      class="block rounded-xl px-4 py-3 text-sm font-medium text-muted transition-all duration-300 hover:bg-violet-500/10 hover:text-content"
+      @click="isCvMenuOpen = false"
+    >
+      English version
+    </a>
+
+    <a
+      href="/cv/mariana-barreto-cv-es.pdf"
+      download
+      class="block rounded-xl px-4 py-3 text-sm font-medium text-muted transition-all duration-300 hover:bg-violet-500/10 hover:text-content"
+      @click="isCvMenuOpen = false"
+    >
+      Versión en español
+    </a>
+  </div>
+</div>
 
           <button
             type="button"
@@ -128,15 +168,25 @@ const navLinks = [
       </ul>
 
       <div class="mt-4 flex items-center gap-3">
-        <a
-          href="#download-cv"
-          class="btn btn-primary group flex-1 text-sm"
-          @click="closeMenu"
-        >
-          Download CV
+        <div class="flex flex-1 gap-2">
+  <a
+    href="/cv/mariana-barreto-cv-en.pdf"
+    download
+    class="btn btn-primary group flex-1 px-3 text-sm"
+    @click="closeMenu"
+  >
+    CV EN
+  </a>
 
-          <Icon icon="lucide:download" class="text-lg" />
-        </a>
+  <a
+    href="/cv/mariana-barreto-cv-es.pdf"
+    download
+    class="btn btn-secondary group flex-1 px-3 text-sm"
+    @click="closeMenu"
+  >
+    CV ES
+  </a>
+</div>
 
         <button
           type="button"

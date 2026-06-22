@@ -51,28 +51,33 @@ import { Icon } from "@iconify/vue";
         id="socialIcons"
         class="mt-5 flex items-center justify-center gap-3 lg:justify-start"
       >
-        <a href="#" class="icon-button group">
+        <a href="https://linkedin.com/in/mariana-barreto-castro" class="icon-button group"
+        target="_blank"
+        >
           <Icon
             icon="mdi:linkedin"
             class="text-xl text-blue-500 transition-all duration-300 group-hover:scale-110 group-hover:text-blue-600"
           />
         </a>
 
-        <a href="#" class="icon-button group">
+        <a href="https://github.com/MarianaBarretoCas" class="icon-button group"
+        target="_blank"
+        >
           <Icon
             icon="mdi:github"
             class="text-xl text-content transition-all duration-300 group-hover:scale-110 group-hover:text-slate-500"
           />
         </a>
 
-        <a href="#" class="icon-button group">
+        <a href="https://wa.me/573124669522" class="icon-button group"
+        target="_blank">
           <Icon
             icon="ic:baseline-whatsapp"
             class="text-xl text-green-500 transition-all duration-300 group-hover:scale-110 group-hover:text-green-400"
           />
         </a>
 
-        <a href="#" class="icon-button group">
+        <a href="mailto:marianabarretocas@gmail.com" class="icon-button group">
           <Icon
             icon="streamline-cyber:email-2"
             class="text-xl text-content transition-all duration-300 group-hover:scale-110 group-hover:text-purple-500"
