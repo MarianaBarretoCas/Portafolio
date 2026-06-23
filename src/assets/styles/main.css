@@ -21,7 +21,6 @@ body {
 
 /*Small repeted components*/
 
-
 .btn {
   display: inline-flex;
   align-items: center;
@@ -31,12 +30,8 @@ body {
   padding: 0.75rem 1.5rem;
   font-weight: 500;
   text-align: center;
-  transition:
-    transform 0.3s ease,
-    background-color 0.3s ease,
-    border-color 0.3s ease,
-    color 0.3s ease,
-    box-shadow 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease,
+    border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .btn:hover {
@@ -80,12 +75,8 @@ body {
   background: var(--icon-surface);
   box-shadow: var(--app-shadow-soft);
   backdrop-filter: blur(16px);
-  transition:
-    transform 0.3s ease,
-    background-color 0.3s ease,
-    border-color 0.3s ease,
-    color 0.3s ease,
-    box-shadow 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease,
+    border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .icon-button:hover {
@@ -106,12 +97,8 @@ body {
   color: #facc15;
   box-shadow: var(--app-shadow-soft);
   backdrop-filter: blur(16px);
-  transition:
-    transform 0.3s ease,
-    background-color 0.3s ease,
-    border-color 0.3s ease,
-    color 0.3s ease,
-    box-shadow 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease,
+    border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .theme-button:hover {
@@ -143,9 +130,7 @@ body {
   box-shadow: var(--app-shadow-soft);
   outline: none;
   backdrop-filter: blur(16px);
-  transition:
-    border-color 0.3s ease,
-    box-shadow 0.3s ease,
+  transition: border-color 0.3s ease, box-shadow 0.3s ease,
     background-color 0.3s ease;
 }
 
@@ -156,4 +141,48 @@ body {
 .input-field:focus {
   border-color: rgba(139, 92, 246, 0.75);
   box-shadow: var(--app-shadow-glow);
+}
+
+.project-organic-card {
+  border: 1px solid var(--border-soft);
+  background: radial-gradient(
+      circle at top left,
+      rgba(139, 92, 246, 0.1),
+      transparent 34%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(34, 211, 238, 0.08),
+      transparent 34%
+    ),
+    var(--card);
+  box-shadow: var(--app-shadow-card);
+  backdrop-filter: blur(20px);
+  border-radius: 1.6rem 2rem 1.4rem 1.9rem / 1.9rem 1.4rem 2rem 1.5rem;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.project-organic-card:hover {
+  transform: translateY(-0.35rem);
+  border-color: rgba(139, 92, 246, 0.65);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.18),
+    0 0 34px rgba(139, 92, 246, 0.28);
+}
+
+.project-organic-image {
+  border-radius: 1.2rem 1.6rem 1rem 1.4rem / 1.4rem 1rem 1.6rem 1.2rem;
+}
+
+.project-chip {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  border: 1px solid var(--border-soft);
+  background: var(--icon-surface);
+  padding: 0.25rem 0.7rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #a78bfa;
+  box-shadow: var(--app-shadow-soft);
 }

@@ -151,16 +151,105 @@ export const content = {
     },
 
     projects: {
+      eyebrow: "My work",
       title: "Projects",
+      description:
+        "Digital solutions where I apply development, analysis and automation skills to solve real needs.",
       viewAll: "View GitHub →",
+      detailsLabel: "View details",
+      problemLabel: "Problem",
+      solutionLabel: "Solution",
+      roleLabel: "My role",
+      featuresLabel: "Key features",
+      stackLabel: "Tech stack",
       cards: [
         {
-          title: "Personal Portfolio",
-          description:
-            "Responsive personal portfolio built to present my profile, skills and projects with a modern interface.",
+          title: "Indrugs",
+          type: "Pharmacy Management System",
+          status: "Completed",
           image: "/images/projects/project-1.png",
-          technologies: ["Vue.js", "Tailwind CSS", "JavaScript"],
+
+          shortDescription:
+            "A web system designed to centralize inventory, medication, order, delivery and administrative management for a pharmaceutical operation.",
+
+          problem:
+            "The operation needed a centralized platform to manage medications, control inventory, handle orders, organize deliveries and support administrative processes more efficiently.",
+
+          solution:
+            "I developed a Spring Boot web application using a layered architecture, implementing role-based access control, business logic, DTOs, mappers and specialized modules to organize pharmaceutical operations.",
+
+          role: "I contributed to both backend and frontend development by implementing entities, repositories, services, controllers, business logic and key features. I also collaborated on the system’s visual structure and user experience.",
+
+          features: [
+            "Role-based access control",
+            "Inventory management",
+            "Medication administration",
+            "Order management",
+            "Delivery and vehicle modules",
+            "Dashboard and reporting",
+            "Mass email functionality",
+            "Password recovery",
+            "User profile management",
+            "PQRS management",
+            "Layered architecture with DTOs and mappers",
+          ],
+
+          technologies: [
+            "Java",
+            "Spring Boot",
+            "Spring Security",
+            "JPA",
+            "Hibernate",
+            "MySQL",
+            "Maven",
+            "Docker",
+          ],
+
           demoLabel: "View Project",
+          githubLabel: "Repository",
+          demoUrl: "#",
+          githubUrl: "https://github.com/MarianaBarretoCas",
+        },
+        {
+          title: "StatusCake Monitoring Flow",
+          type: "Monitoring and reporting automation",
+          status: "Completed",
+          image: "/images/projects/project-2.png",
+
+          shortDescription:
+            "An automated workflow to process StatusCake alerts, track downtime and recovery events, calculate incident duration and generate Excel reports.",
+
+          problem:
+            "Service monitoring generated email alerts, but the information was scattered and difficult to consolidate into an operational report with outages, recoveries, incident duration, reasons and affected services.",
+
+          solution:
+            "I designed an n8n workflow that reads StatusCake notifications, identifies DOWN and UP events, extracts key data, matches outages with recoveries and automatically updates a tracking file with a detailed log and incident summary.",
+
+          role: "I designed the workflow logic, structured the alert processing, defined event classification rules, calculated downtime duration and organized the information to generate clear and reusable reports.",
+
+          features: [
+            "Automatic email alert processing",
+            "DOWN and UP event classification",
+            "Extraction of service, status, time, region and reason",
+            "Matching outages with recovery events",
+            "Incident duration calculation",
+            "Historical event log",
+            "Outage summary by service",
+            "Pending incident detection",
+            "Automatic Excel file update",
+          ],
+
+          technologies: [
+            "n8n",
+            "StatusCake",
+            "Email",
+            "Excel",
+            "JavaScript",
+            "Automation",
+            "Webhooks",
+          ],
+
+          demoLabel: "View Flow",
           githubLabel: "Repository",
           demoUrl: "#",
           githubUrl: "https://github.com/MarianaBarretoCas",
@@ -377,16 +466,105 @@ export const content = {
     },
 
     projects: {
+      eyebrow: "Mi trabajo",
       title: "Proyectos",
+      description:
+        "Soluciones digitales donde aplico desarrollo, análisis y automatización para responder a necesidades reales.",
       viewAll: "Ver GitHub →",
+      detailsLabel: "Ver detalles",
+      problemLabel: "Problema",
+      solutionLabel: "Solución",
+      roleLabel: "Mi rol",
+      featuresLabel: "Funcionalidades clave",
+      stackLabel: "Stack tecnológico",
       cards: [
         {
-          title: "Portafolio personal",
-          description:
-            "Portafolio responsivo desarrollado para presentar mi perfil, habilidades y proyectos con una interfaz moderna.",
+          title: "Indrugs",
+          type: "Sistema de Gestión Farmacéutica",
+          status: "Completado",
           image: "/images/projects/project-1.png",
-          technologies: ["Vue.js", "Tailwind CSS", "JavaScript"],
+
+          shortDescription:
+            "Sistema web diseñado para centralizar la gestión de inventario, medicamentos, pedidos, entregas y procesos administrativos en una operación farmacéutica.",
+
+          problem:
+            "La operación necesitaba una plataforma centralizada para administrar medicamentos, controlar inventario, gestionar pedidos, organizar entregas y manejar procesos administrativos de forma más eficiente.",
+
+          solution:
+            "Desarrollé una aplicación web con Spring Boot y una arquitectura por capas, implementando control de acceso por roles, lógica de negocio, DTOs, mapeadores y módulos especializados para organizar las operaciones farmacéuticas.",
+
+          role: "Participé en el desarrollo backend y frontend, implementando entidades, repositorios, servicios, controladores, lógica de negocio y funcionalidades clave. También colaboré en la estructura visual y experiencia de usuario del sistema.",
+
+          features: [
+            "Control de acceso basado en roles",
+            "Gestión de inventario",
+            "Administración de medicamentos",
+            "Gestión de pedidos",
+            "Módulos de domicilios y vehículos",
+            "Dashboard y reportes",
+            "Envío masivo de correos",
+            "Recuperación de contraseña",
+            "Gestión de perfil de usuario",
+            "Gestión de PQRS",
+            "Arquitectura por capas con DTOs y mapeadores",
+          ],
+
+          technologies: [
+            "Java",
+            "Spring Boot",
+            "Spring Security",
+            "JPA",
+            "Hibernate",
+            "MySQL",
+            "Maven",
+            "Docker",
+          ],
+
           demoLabel: "Ver proyecto",
+          githubLabel: "Repositorio",
+          demoUrl: "#",
+          githubUrl: "https://github.com/MarianaBarretoCas",
+        },
+        {
+          title: "StatusCake Monitoring Flow",
+          type: "Automatización de monitoreo y reportes",
+          status: "Completado",
+          image: "/images/projects/project-2.png",
+
+          shortDescription:
+            "Flujo automatizado para procesar alertas de StatusCake, registrar eventos de caída y recuperación, calcular duración de incidentes y generar reportes en Excel.",
+
+          problem:
+            "El monitoreo de servicios generaba alertas por correo, pero la información quedaba dispersa y era difícil consolidar caídas, recuperaciones, duración de incidentes, motivos y servicios afectados en un reporte operativo.",
+
+          solution:
+            "Diseñé un flujo en n8n que lee notificaciones de StatusCake, identifica eventos DOWN y UP, extrae datos clave, relaciona caídas con recuperaciones y actualiza automáticamente un archivo de seguimiento con log detallado y resumen de incidentes.",
+
+          role: "Diseñé la lógica del flujo, estructuré el procesamiento de alertas, definí las reglas para clasificar eventos, calculé tiempos de indisponibilidad y organicé la información para generar reportes claros y reutilizables.",
+
+          features: [
+            "Lectura automática de alertas por correo",
+            "Clasificación de eventos DOWN y UP",
+            "Extracción de servicio, estado, hora, región y motivo",
+            "Relación entre caída y recuperación",
+            "Cálculo de duración del incidente",
+            "Registro histórico de eventos",
+            "Resumen de caídas por servicio",
+            "Identificación de incidentes pendientes",
+            "Actualización automática de archivo Excel",
+          ],
+
+          technologies: [
+            "n8n",
+            "StatusCake",
+            "Email",
+            "Excel",
+            "JavaScript",
+            "Automatización",
+            "Webhooks",
+          ],
+
+          demoLabel: "Ver flujo",
           githubLabel: "Repositorio",
           demoUrl: "#",
           githubUrl: "https://github.com/MarianaBarretoCas",
