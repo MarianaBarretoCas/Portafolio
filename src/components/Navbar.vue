@@ -6,7 +6,6 @@ import { useLanguage } from "../composables/useLanguage";
 
 const isMenuOpen = ref(false);
 const isScrolled = ref(false);
-const isCvMenuOpen = ref(false);
 
 const { theme, toggleTheme } = useTheme();
 const { language, t, toggleLanguage } = useLanguage();
@@ -20,13 +19,45 @@ const navLinks = computed(() => [
   { name: t.value.nav.contact, href: "#contact" },
 ]);
 
-const closeMenu = () => {
-  isMenuOpen.value = false;
-  isCvMenuOpen.value = false;
+const cvUrl = computed(() =>
+  language.value === "en"
+    ? "/cv/Cv-Mariana.pdf"
+    : "/cv/Hoja-de-vida-Mariana.pdf"
+);
+
+const cvFileName = computed(() =>
+  language.value === "en" ? "Cv-Mariana.pdf" : "Hoja-de-vida-Mariana.pdf"
+);
+
+const downloadCv = async () => {
+  try {
+    const response = await fetch(cvUrl.value);
+
+    if (!response.ok) {
+      throw new Error("No se pudo cargar el CV");
+    }
+
+    const blob = await response.blob();
+    const blobUrl = URL.createObjectURL(blob);
+
+    const link = document.createElement("a");
+    link.href = blobUrl;
+    link.download = cvFileName.value;
+
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    URL.revokeObjectURL(blobUrl);
+  } catch (error) {
+    window.open(cvUrl.value, "_blank");
+  }
+
+  closeMenu();
 };
 
-const toggleCvMenu = () => {
-  isCvMenuOpen.value = !isCvMenuOpen.value;
+const closeMenu = () => {
+  isMenuOpen.value = false;
 };
 
 const handleLanguageToggle = () => {
@@ -92,44 +123,15 @@ onUnmounted(() => {
         </ul>
 
         <div class="hidden items-center gap-4 md:flex">
-          <div class="relative">
-            <button
-              type="button"
-              class="btn btn-primary group"
-              @click="toggleCvMenu"
-            >
-              {{ t.cv.button }}
+          <button
+            type="button"
+            class="btn btn-primary group"
+            @click="downloadCv"
+          >
+            {{ t.cv.button }}
 
-              <Icon
-                icon="lucide:chevron-down"
-                class="text-lg transition-transform duration-300"
-                :class="{ 'rotate-180': isCvMenuOpen }"
-              />
-            </button>
-
-            <div
-              v-if="isCvMenuOpen"
-              class="absolute right-0 top-full z-50 mt-3 w-48 overflow-hidden rounded-2xl border border-border-soft bg-nav p-2 shadow-nav backdrop-blur-xl"
-            >
-              <a
-                href="/cv/mariana-barreto-cv-en.pdf"
-                download
-                class="block rounded-xl px-4 py-3 text-sm font-medium text-muted transition-all duration-300 hover:bg-violet-500/10 hover:text-content"
-                @click="isCvMenuOpen = false"
-              >
-                {{ t.cv.english }}
-              </a>
-
-              <a
-                href="/cv/mariana-barreto-cv-es.pdf"
-                download
-                class="block rounded-xl px-4 py-3 text-sm font-medium text-muted transition-all duration-300 hover:bg-violet-500/10 hover:text-content"
-                @click="isCvMenuOpen = false"
-              >
-                {{ t.cv.spanish }}
-              </a>
-            </div>
-          </div>
+            <Icon icon="lucide:download" class="text-lg" />
+          </button>
 
           <button
             type="button"
@@ -149,7 +151,11 @@ onUnmounted(() => {
             @click="toggleTheme"
           >
             <Icon
-              :icon="theme === 'dark' ? 'solar:moon-bold-duotone' : 'solar:sun-bold-duotone'"
+              :icon="
+                theme === 'dark'
+                  ? 'solar:moon-bold-duotone'
+                  : 'solar:sun-bold-duotone'
+              "
               class="text-xl transition-all duration-300 group-hover:rotate-12 group-hover:scale-110"
             />
           </button>
@@ -185,26 +191,15 @@ onUnmounted(() => {
       </ul>
 
       <div class="mt-4 flex items-center gap-3">
-        <div class="flex flex-1 gap-2">
-          <a
-            href="/cv/mariana-barreto-cv-en.pdf"
-            download
-            class="btn btn-primary group flex-1 px-3 text-sm"
-            @click="closeMenu"
-          >
-            CV EN
-          </a>
+        <button
+          type="button"
+          class="btn btn-primary group flex-1 px-3 text-sm"
+          @click="downloadCv"
+        >
+          {{ t.cv.button }}
 
-          <a
-            href="/cv/mariana-barreto-cv-es.pdf"
-            download
-            class="btn btn-secondary group flex-1 px-3 text-sm"
-            @click="closeMenu"
-          >
-            CV ES
-          </a>
-        </div>
-
+          <Icon icon="lucide:download" class="text-lg" />
+        </button>
         <button
           type="button"
           aria-label="Cambiar idioma"
@@ -223,7 +218,11 @@ onUnmounted(() => {
           @click="toggleTheme"
         >
           <Icon
-            :icon="theme === 'dark' ? 'solar:moon-bold-duotone' : 'solar:sun-bold-duotone'"
+            :icon="
+              theme === 'dark'
+                ? 'solar:moon-bold-duotone'
+                : 'solar:sun-bold-duotone'
+            "
             class="text-xl transition-all duration-300"
           />
         </button>
