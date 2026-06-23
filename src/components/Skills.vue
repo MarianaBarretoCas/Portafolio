@@ -1,8 +1,9 @@
 <script setup>
 import { ref } from "vue";
 import { Icon } from "@iconify/vue";
-import { skillGroups } from "../data/skills";
+import { useLanguage } from "../composables/useLanguage";
 
+const { t } = useLanguage();
 const activeCard = ref(null);
 
 const toggleCard = (title) => {
@@ -19,24 +20,26 @@ const toggleCard = (title) => {
       <span
         class="text-sm font-semibold uppercase tracking-[0.25em] text-violet-400"
       >
-        My expertise
+        {{ t.skills.eyebrow }}
       </span>
 
       <h2 class="mt-3 text-3xl font-bold text-content sm:text-4xl">
-        Skills & Technologies
+        {{ t.skills.title }}
       </h2>
 
       <p class="mx-auto mt-3 max-w-xl text-sm text-muted sm:text-base">
-        Technologies and skills I use to transform ideas into functional digital
-        solutions.
+        {{ t.skills.description }}
       </p>
     </div>
 
-    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+    <div
+      class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3"
+      style="grid-auto-rows: 320px"
+    >
       <article
-        v-for="group in skillGroups"
+        v-for="group in t.skills.groups"
         :key="group.title"
-        class="group min-h-[270px] cursor-pointer [perspective:1200px]"
+        class="group h-full cursor-pointer [perspective:1200px]"
         role="button"
         tabindex="0"
         :aria-label="`View details about ${group.title}`"
@@ -45,7 +48,7 @@ const toggleCard = (title) => {
         @keydown.space.prevent="toggleCard(group.title)"
       >
         <div
-          class="relative h-full min-h-[270px] transition-transform duration-500 [transform-style:preserve-3d] md:group-hover:[transform:rotateY(180deg)]"
+          class="relative h-full transition-transform duration-500 [transform-style:preserve-3d] md:group-hover:[transform:rotateY(180deg)]"
           :class="{
             '[transform:rotateY(180deg)]': activeCard === group.title,
           }"

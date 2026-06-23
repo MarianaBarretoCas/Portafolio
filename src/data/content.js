@@ -11,8 +11,6 @@ export const content = {
 
     cv: {
       button: "Download CV",
-      english: "English version",
-      spanish: "Spanish version",
     },
 
     hero: {
@@ -20,38 +18,38 @@ export const content = {
       name: "Mariana Barreto Castro",
       role: "Software Analyst & Developer",
       description:
-        "I design and build digital solutions by combining requirements analysis, web development and a user-focused mindset.",
+        "I design and build digital solutions by combining requirements analysis, process automation and web development.",
       primaryButton: "View my work",
       secondaryButton: "Contact me",
     },
 
     about: {
       title: "About Me",
+      tagline: "Building digital solutions with structure, logic and purpose.",
       paragraphs: [
-        "I'm a curious and proactive software analyst and developer focused on transforming ideas into useful digital solutions.",
-        "I enjoy understanding user needs, documenting requirements and supporting the development of clear, functional and scalable systems.",
-        "I'm constantly learning and improving my skills in frontend development, backend foundations, databases and functional analysis.",
+        "I’m a software developer focused on turning ideas and processes into functional digital solutions.",
+        "I enjoy combining analysis, backend logic, databases, automation and user-friendly interfaces to build tools that solve real needs.",
       ],
       cards: [
         {
-          title: "Analytical",
+          title: "Analysis",
           description:
-            "I enjoy understanding problems, organizing information and translating needs into clear solutions.",
+            "I understand needs, organize information and translate processes into clear technical solutions.",
           icon: "ph:brain-duotone",
           type: "purple",
         },
         {
-          title: "Developer",
+          title: "Development",
           description:
-            "I build clean, responsive and user-friendly interfaces with modern web technologies.",
+            "I build functional solutions by connecting logic, data and user-friendly interfaces.",
           icon: "lucide:code-xml",
           type: "green",
         },
         {
-          title: "Learner",
+          title: "Automation",
           description:
-            "I'm always learning, improving and exploring better ways to solve problems.",
-          icon: "solar:lightbulb-bolt-outline",
+            "I optimize workflows through integrations, digital tools and process automation.",
+          icon: "hugeicons:flow-circle",
           type: "yellow",
         },
       ],
@@ -59,15 +57,15 @@ export const content = {
 
     skills: {
       eyebrow: "My expertise",
-      title: "Skills & Technologies",
+      title: "Skills & Stack",
       description:
-        "Skills and tools I use to analyze, design and build functional digital solutions.",
+        "Skills and tools I use to analyze processes, build digital solutions and automate workflows.",
       groups: [
         {
-          title: "Frontend Development",
+          title: "Digital Solutions Development",
           subtitle: "Interfaces and user experience",
           description:
-            "I create responsive and accessible interfaces focused on clarity, usability and visual consistency.",
+            "Building web interfaces and features with a focus on structure, usability and user experience.",
           icon: "lucide:monitor",
           color: "#8b5cf6",
           technologies: [
@@ -76,13 +74,14 @@ export const content = {
             { name: "JavaScript", icon: "devicon:javascript" },
             { name: "Vue.js", icon: "devicon:vuejs" },
             { name: "Tailwind CSS", icon: "devicon:tailwindcss" },
+            { name: "Bootstrap", icon: "devicon:bootstrap" },
           ],
         },
         {
           title: "Functional Analysis",
           subtitle: "Requirements and documentation",
           description:
-            "I analyze business needs, document requirements and help translate ideas into clear technical and functional specifications.",
+            "Understanding needs, documenting requirements and defining solutions from both functional and technical perspectives.",
           icon: "solar:document-text-outline",
           color: "#f59e0b",
           technologies: [
@@ -93,31 +92,59 @@ export const content = {
           ],
         },
         {
-          title: "Backend & Databases",
-          subtitle: "Logic and data management",
+          title: "Backend & APIs",
+          subtitle: "Logic, services and integration",
           description:
-            "I have foundations in backend development and database management to support complete digital solutions.",
-          icon: "lucide:database",
+            "Building backend logic, services and integrations to connect systems and support functional solutions.",
+          icon: "lucide:server",
           color: "#22c55e",
           technologies: [
-            { name: "Java", icon: "devicon:java" },
+            { name: "Node.js", icon: "devicon:nodejs" },
             { name: "Spring Boot", icon: "devicon:spring" },
+            { name: "REST APIs", icon: "carbon:api" },
+          ],
+        },
+        {
+          title: "Databases",
+          subtitle: "Data management and storage",
+          description:
+            "Managing data, relational structures and storage services to support digital solutions.",
+          icon: "lucide:database",
+          color: "#e11d48",
+          technologies: [
             { name: "MySQL", icon: "devicon:mysql" },
-            { name: "PostgreSQL", icon: "devicon:postgresql" },
+            { name: "SQL Server", icon: "devicon:microsoftsqlserver" },
+            { name: "Firestore & Firebase", icon: "logos:firebase" },
+            { name: "MongoDB", icon: "devicon:mongodb" },
+          ],
+        },
+        {
+          title: "Automation",
+          subtitle: "Workflows",
+          description:
+            "Creating automated workflows to connect tools, reduce manual tasks and optimize processes.",
+          icon: "hugeicons:flow-circle",
+          color: "#f59e0b",
+          technologies: [
+            { name: "n8n", icon: "simple-icons:n8n" },
+            { name: "APIs", icon: "carbon:api" },
+            { name: "Webhooks", icon: "mdi:webhook" },
+            { name: "HTTP Requests", icon: "lucide:send" },
           ],
         },
         {
           title: "Tools & Workflow",
           subtitle: "Version control and organization",
           description:
-            "I use collaborative tools to organize work, manage code and support software development processes.",
+            "I use collaborative tools to organize work, manage code and support development processes.",
           icon: "lucide:wrench",
           color: "#f43f5e",
           technologies: [
             { name: "Git", icon: "devicon:git" },
             { name: "GitHub", icon: "mdi:github" },
-            { name: "Jira", icon: "devicon:jira" },
             { name: "VS Code", icon: "devicon:vscode" },
+            { name: "Postman", icon: "devicon:postman" },
+            { name: "Jira", icon: "devicon:jira" },
           ],
         },
       ],
@@ -209,47 +236,46 @@ export const content = {
 
     cv: {
       button: "Descargar CV",
-      english: "Versión en inglés",
-      spanish: "Versión en español",
     },
 
     hero: {
-      eyebrow: "HOLA, SOY",
+      eyebrow: "¡HOLA!, SOY",
       name: "Mariana Barreto Castro",
       role: "Analista y Desarrolladora de Software",
       description:
-        "Diseño y desarrollo soluciones digitales combinando análisis de requerimientos, desarrollo web y una visión centrada en el usuario.",
+        "Diseño y desarrollo soluciones digitales combinando análisis de requerimientos, automatización de procesos y desarrollo web.",
       primaryButton: "Ver mi trabajo",
       secondaryButton: "Contáctame",
     },
 
     about: {
       title: "Sobre mí",
+      tagline:
+        "Construyendo soluciones digitales con estructura, lógica y propósito.",
       paragraphs: [
-        "Soy una analista y desarrolladora de software curiosa, proactiva y enfocada en transformar ideas en soluciones digitales útiles.",
-        "Disfruto entender las necesidades de los usuarios, documentar requerimientos y apoyar el desarrollo de sistemas claros, funcionales y escalables.",
-        "Estoy en constante aprendizaje, fortaleciendo mis habilidades en desarrollo frontend, fundamentos backend, bases de datos y análisis funcional.",
+        "Soy desarrolladora de software enfocada en convertir ideas y procesos en soluciones digitales funcionales.",
+        "Me gusta combinar análisis, lógica backend, bases de datos, automatización e interfaces claras para construir herramientas que respondan a necesidades reales.",
       ],
       cards: [
         {
-          title: "Analítica",
+          title: "Análisis",
           description:
-            "Me gusta entender problemas, organizar información y convertir necesidades en soluciones claras.",
+            "Entiendo necesidades, organizo información y traduzco procesos en soluciones técnicas claras.",
           icon: "ph:brain-duotone",
           type: "purple",
         },
         {
-          title: "Desarrolladora",
+          title: "Desarrollo",
           description:
-            "Construyo interfaces limpias, responsivas y centradas en la experiencia de usuario.",
+            "Construyo soluciones funcionales conectando lógica, datos e interfaces fáciles de usar.",
           icon: "lucide:code-xml",
           type: "green",
         },
         {
-          title: "Aprendizaje",
+          title: "Automatización",
           description:
-            "Siempre estoy aprendiendo, mejorando y buscando mejores formas de resolver problemas.",
-          icon: "solar:lightbulb-bolt-outline",
+            "Optimizo flujos de trabajo mediante integraciones, herramientas digitales y automatización de procesos.",
+          icon: "hugeicons:flow-circle",
           type: "yellow",
         },
       ],
@@ -257,15 +283,15 @@ export const content = {
 
     skills: {
       eyebrow: "Mi experiencia",
-      title: "Habilidades y tecnologías",
+      title: "Habilidades & Stack",
       description:
-        "Habilidades y herramientas que uso para analizar, diseñar y construir soluciones digitales funcionales.",
+        "Habilidades y herramientas que uso para analizar procesos, construir soluciones digitales y automatizar flujos de trabajo.",
       groups: [
         {
-          title: "Desarrollo Frontend",
+          title: "Desarrollo de soluciones digitales",
           subtitle: "Interfaces y experiencia de usuario",
           description:
-            "Creo interfaces responsivas y accesibles enfocadas en claridad, usabilidad y consistencia visual.",
+            "Construcción de interfaces y funcionalidades web con enfoque en estructura, usabilidad y experiencia de usuario.",
           icon: "lucide:monitor",
           color: "#8b5cf6",
           technologies: [
@@ -274,13 +300,14 @@ export const content = {
             { name: "JavaScript", icon: "devicon:javascript" },
             { name: "Vue.js", icon: "devicon:vuejs" },
             { name: "Tailwind CSS", icon: "devicon:tailwindcss" },
+            { name: "Bootstrap", icon: "devicon:bootstrap" },
           ],
         },
         {
           title: "Análisis Funcional",
           subtitle: "Requerimientos y documentación",
           description:
-            "Analizo necesidades de negocio, documento requerimientos y ayudo a convertir ideas en especificaciones claras.",
+            "Comprensión de necesidades, documentación de requerimientos y definición de soluciones desde una visión funcional y técnica.",
           icon: "solar:document-text-outline",
           color: "#f59e0b",
           technologies: [
@@ -291,17 +318,44 @@ export const content = {
           ],
         },
         {
-          title: "Backend y bases de datos",
-          subtitle: "Lógica y gestión de datos",
+          title: "Backend y APIs",
+          subtitle: "Lógica, servicios e integración",
           description:
-            "Tengo bases en desarrollo backend y gestión de bases de datos para apoyar soluciones digitales completas.",
-          icon: "lucide:database",
+            "Construcción de lógica backend, servicios e integraciones para conectar sistemas y soportar soluciones funcionales.",
+          icon: "lucide:server",
           color: "#22c55e",
           technologies: [
-            { name: "Java", icon: "devicon:java" },
+            { name: "Node.js", icon: "devicon:nodejs" },
             { name: "Spring Boot", icon: "devicon:spring" },
+            { name: "REST APIs", icon: "carbon:api" },
+          ],
+        },
+        {
+          title: "Bases de datos",
+          subtitle: "Gestión y almacenamiento de información",
+          description:
+            "Manejo de datos, estructuras relacionales y servicios de almacenamiento para apoyar soluciones digitales.",
+          icon: "lucide:database",
+          color: "#e11d48",
+          technologies: [
             { name: "MySQL", icon: "devicon:mysql" },
-            { name: "PostgreSQL", icon: "devicon:postgresql" },
+            { name: "Sql Server", icon: "devicon:microsoftsqlserver" },
+            { name: "Y Firestore", icon: "logos:firebase" },
+            { name: "MongoDB", icon: "devicon:mongodb" },
+          ],
+        },
+        {
+          title: "Automatización",
+          subtitle: "Flujos de trabajo",
+          description:
+            "Creación de flujos automatizados para conectar herramientas, reducir tareas manuales y optimizar procesos.",
+          icon: "hugeicons:flow-circle",
+          color: "#f59e0b",
+          technologies: [
+            { name: "n8n", icon: "simple-icons:n8n" },
+            { name: "APIs", icon: "carbon:api" },
+            { name: "Webhooks", icon: "mdi:webhook" },
+            { name: "HTTP Requests", icon: "lucide:send" },
           ],
         },
         {
@@ -314,8 +368,9 @@ export const content = {
           technologies: [
             { name: "Git", icon: "devicon:git" },
             { name: "GitHub", icon: "mdi:github" },
-            { name: "Jira", icon: "devicon:jira" },
             { name: "VS Code", icon: "devicon:vscode" },
+            { name: "Postman", icon: "devicon:postman" },
+            { name: "Jira", icon: "devicon:jira" },
           ],
         },
       ],

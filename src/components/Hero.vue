@@ -1,5 +1,8 @@
 <script setup>
 import { Icon } from "@iconify/vue";
+import { useLanguage } from "../composables/useLanguage";
+
+const { t } = useLanguage();
 </script>
 
 <template>
@@ -9,27 +12,26 @@ import { Icon } from "@iconify/vue";
   >
     <div class="info flex flex-col items-center lg:items-start">
       <h3 class="mb-2 text-sm tracking-widest text-violet-400">
-        HELLO! I'M
+        {{ t.hero.eyebrow }}
       </h3>
 
       <h1 class="mb-1 text-4xl font-bold text-content sm:text-5xl lg:text-5xl">
-        Mariana Barreto Castro
+        {{ t.hero.name }}
       </h1>
 
       <h3 class="mb-3 font-semibold text-purple-400">
-        Functional Software Analyst & Developer
+        {{ t.hero.role }}
       </h3>
 
       <p class="mb-1 max-w-lg leading-relaxed text-muted">
-        I help businesses and teams turn ideas into effective digital solutions
-        with code, analysis and a user-focused mindset.
+        {{ t.hero.description }}
       </p>
 
       <div
         class="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row lg:justify-start"
       >
         <a href="#projects" class="btn btn-primary group">
-          View my work
+          {{ t.hero.primaryButton }}
 
           <Icon
             icon="bitcoin-icons:arrow-right-filled"
@@ -38,7 +40,7 @@ import { Icon } from "@iconify/vue";
         </a>
 
         <a href="#contact" class="btn btn-secondary group">
-          Contact me
+          {{ t.hero.secondaryButton }}
 
           <Icon
             icon="streamline-cyber:email-2"
@@ -51,8 +53,11 @@ import { Icon } from "@iconify/vue";
         id="socialIcons"
         class="mt-5 flex items-center justify-center gap-3 lg:justify-start"
       >
-        <a href="https://linkedin.com/in/mariana-barreto-castro" class="icon-button group"
-        target="_blank"
+        <a
+          href="https://linkedin.com/in/mariana-barreto-castro"
+          class="icon-button group"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <Icon
             icon="mdi:linkedin"
@@ -60,8 +65,11 @@ import { Icon } from "@iconify/vue";
           />
         </a>
 
-        <a href="https://github.com/MarianaBarretoCas" class="icon-button group"
-        target="_blank"
+        <a
+          href="https://github.com/MarianaBarretoCas"
+          class="icon-button group"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <Icon
             icon="mdi:github"
@@ -69,8 +77,12 @@ import { Icon } from "@iconify/vue";
           />
         </a>
 
-        <a href="https://wa.me/573124669522" class="icon-button group"
-        target="_blank">
+        <a
+          href="https://wa.me/573124669522"
+          class="icon-button group"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Icon
             icon="ic:baseline-whatsapp"
             class="text-xl text-green-500 transition-all duration-300 group-hover:scale-110 group-hover:text-green-400"

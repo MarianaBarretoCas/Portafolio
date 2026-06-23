@@ -1,30 +1,22 @@
 <script setup>
+import { computed } from "vue";
 import { Icon } from "@iconify/vue";
+import { useLanguage } from "../composables/useLanguage";
 
-const aboutCards = [
-  {
-    title: "Analytical",
-    description:
-      "I love understanding problems deeply and finding the best solutions.",
-    icon: "ph:brain-duotone",
-    iconBoxClass:
-      "bg-icon-purple-surface text-violet-400 group-hover:bg-violet-500/35",
-  },
-  {
-    title: "Developer",
-    description: "I turn ideas into clean, efficient and scalable code.",
-    icon: "lucide:code-xml",
-    iconBoxClass:
-      "bg-icon-green-surface text-green-500 group-hover:bg-green-500/35",
-  },
-  {
-    title: "Learner",
-    description: "I'm always learning something new and challenging myself.",
-    icon: "solar:lightbulb-bolt-outline",
-    iconBoxClass:
-      "bg-icon-yellow-surface text-yellow-500 group-hover:bg-yellow-500/35",
-  },
-];
+const { t } = useLanguage();
+
+const cardStyles = {
+  purple: "bg-icon-purple-surface text-violet-400 group-hover:bg-violet-500/35",
+  green: "bg-icon-green-surface text-green-500 group-hover:bg-green-500/35",
+  yellow: "bg-icon-yellow-surface text-yellow-500 group-hover:bg-yellow-500/35",
+};
+
+const aboutCards = computed(() =>
+  t.value.about.cards.map((card) => ({
+    ...card,
+    iconBoxClass: cardStyles[card.type],
+  }))
+);
 </script>
 
 <template>
@@ -35,23 +27,16 @@ const aboutCards = [
     <div class="grid items-start gap-10 lg:grid-cols-[1.05fr_1.55fr]">
       <div class="my-resume">
         <h2 class="mb-4 text-2xl font-semibold text-content">
-          About Me
+          {{ t.about.title }}
         </h2>
 
+        <h3 class="mb-5 text-xl font-semibold leading-snug text-violet-400">
+          {{ t.about.tagline }}
+        </h3>
+
         <div class="space-y-4 text-sm leading-relaxed text-muted">
-          <p>
-            I'm a curious and proactive developer with experience in
-            requirements analysis, system migration and web development.
-          </p>
-
-          <p>
-            I enjoy transforming business needs into technical solutions that
-            generate real impact.
-          </p>
-
-          <p>
-            I love learning, solving problems and continuously improving my
-            skills to build scalable and user-centered applications.
+          <p v-for="paragraph in t.about.paragraphs" :key="paragraph">
+            {{ paragraph }}
           </p>
         </div>
       </div>

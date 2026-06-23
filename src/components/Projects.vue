@@ -1,5 +1,8 @@
 <script setup>
 import ProjectCard from "./ProjectCard.vue";
+import { useLanguage } from "../composables/useLanguage";
+
+const { t } = useLanguage();
 </script>
 
 <template>
@@ -9,7 +12,7 @@ import ProjectCard from "./ProjectCard.vue";
   >
     <div class="mb-8 flex items-center justify-between gap-4">
       <h2 class="text-2xl font-semibold text-content">
-        Projects
+        {{ t.projects.title }}
       </h2>
 
       <a
@@ -17,7 +20,7 @@ import ProjectCard from "./ProjectCard.vue";
         target="_blank"
         class="text-sm font-medium text-violet-500 transition-colors duration-300 hover:text-violet-400"
       >
-        Go to git hub →
+        {{ t.projects.viewAll }}
       </a>
     </div>
 

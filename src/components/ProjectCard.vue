@@ -1,12 +1,15 @@
 <script setup>
 import { Icon } from "@iconify/vue";
+import { useLanguage } from "../composables/useLanguage";
+
+const { t } = useLanguage();
 </script>
 
 <template>
   <article
-  id="project-card"
-  class="group glass-card overflow-hidden rounded-2xl transition-all duration-300 hover:-translate-y-1 shadow-card hover:border-violet-500/50 hover:shadow-project-hover"
->
+    id="project-card"
+    class="group glass-card overflow-hidden rounded-2xl transition-all duration-300 hover:-translate-y-1 shadow-card hover:border-violet-500/50 hover:shadow-project-hover"
+  >
     <div id="image-project" class="h-48 overflow-hidden bg-surface-strong">
       <img
         src="/images/projects/project-1.png"
