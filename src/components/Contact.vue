@@ -1,6 +1,9 @@
 <script setup>
 import { reactive } from "vue";
 import { Icon } from "@iconify/vue";
+import { useLanguage } from "../composables/useLanguage";
+
+const { t } = useLanguage();
 
 const form = reactive({
   name: "",
@@ -37,12 +40,11 @@ ${form.message}`
       <div class="grid gap-10 lg:grid-cols-[0.9fr_1.4fr]">
         <div>
           <h2 class="mb-3 text-2xl font-semibold text-content">
-            Let's Connect!
+            {{ t.contact.title }}
           </h2>
 
           <p class="mb-8 max-w-md text-sm leading-relaxed text-muted">
-            I'd love to hear about your project, opportunity or idea. Feel free
-            to contact me through any of these channels.
+            {{ t.contact.description }}
           </p>
 
           <div class="space-y-4">
@@ -133,7 +135,7 @@ ${form.message}`
             <input
               v-model="form.name"
               type="text"
-              placeholder="Your name"
+              :placeholder="t.contact.fields.name"
               required
               class="input-field px-4 py-5 text-sm"
             />
@@ -141,7 +143,7 @@ ${form.message}`
             <input
               v-model="form.email"
               type="email"
-              placeholder="Your email"
+              :placeholder="t.contact.fields.email"
               required
               class="input-field px-4 py-5 text-sm"
             />
@@ -150,7 +152,7 @@ ${form.message}`
           <input
             v-model="form.subject"
             type="text"
-            placeholder="Subject"
+            :placeholder="t.contact.fields.subject"
             required
             class="input-field px-4 py-5 text-sm"
           />
@@ -158,7 +160,7 @@ ${form.message}`
           <textarea
             v-model="form.message"
             rows="6"
-            placeholder="Message"
+            :placeholder="t.contact.fields.message"
             required
             class="input-field resize-none px-4 py-3 text-sm"
           ></textarea>
@@ -169,7 +171,7 @@ ${form.message}`
               class="text-lg transition-transform duration-300 group-hover:translate-x-1"
             />
 
-            Send Message
+            {{ t.contact.button }}
           </button>
         </form>
       </div>

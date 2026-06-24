@@ -41,14 +41,19 @@
   color-scheme: dark;
 
   --page: radial-gradient(
-      circle at top left,
-      rgba(138, 92, 246, 0.301),
-      transparent 34%
+      ellipse 90% 70% at 15% 10%,
+      rgba(138, 92, 246, 0.4),
+      transparent 55%
     ),
     radial-gradient(
-      circle at bottom right,
-      rgba(34, 211, 238, 0.205),
-      transparent 34%
+      ellipse 85% 65% at 90% 85%,
+      rgba(34, 211, 238, 0.4),
+      transparent 58%
+    ),
+    radial-gradient(
+      ellipse 70% 55% at 50% 50%,
+      rgba(162, 0, 255, 0.2),
+      transparent 65%
     );
   --surface: rgba(15, 23, 42, 0.35);
   --surface-strong: rgba(15, 23, 42, 0.65);
@@ -99,14 +104,19 @@
   color-scheme: light;
 
   --page: radial-gradient(
-      circle at top left,
-      rgba(138, 92, 246, 0.301),
-      transparent 34%
+      ellipse 90% 70% at 15% 10%,
+      rgba(138, 92, 246, 0.4),
+      transparent 55%
     ),
     radial-gradient(
-      circle at bottom right,
-      rgba(34, 211, 238, 0.205),
-      transparent 34%
+      ellipse 85% 65% at 90% 85%,
+      rgba(34, 211, 238, 0.4),
+      transparent 58%
+    ),
+    radial-gradient(
+      ellipse 70% 55% at 50% 50%,
+      rgba(162, 0, 255, 0.2),
+      transparent 65%
     );
   --surface: rgba(255, 255, 255, 0.72);
   --surface-strong: rgba(255, 255, 255, 0.92);

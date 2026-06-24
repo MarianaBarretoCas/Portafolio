@@ -309,31 +309,24 @@ export const content = {
       items: [
         {
           year: "2024",
-          title: "Software Analysis & Development",
+          title: "Beginning My Journey",
           description:
-            "Learning and building digital solutions through frontend, backend and requirements analysis.",
+            "Started studying Software Analysis and Development and discovered my passion for creating digital solutions.",
+          icon: "lucide:rocket",
+        },
+        {
+          year: "2025",
+          title: "Building Real Projects",
+          description:
+            "Developed Indrugs and academic solutions, gaining experience with backend development and software architecture.",
           icon: "lucide:code-xml",
         },
         {
-          year: "2023",
-          title: "Functional Analysis",
+          year: "2026",
+          title: "Professional Experience",
           description:
-            "Requirements gathering, documentation and understanding user needs.",
-          icon: "solar:document-text-outline",
-        },
-        {
-          year: "2022",
-          title: "Web Development",
-          description:
-            "Frontend practice, interface development and responsive design.",
-          icon: "lucide:monitor",
-        },
-        {
-          year: "2021",
-          title: "Start of my Journey",
-          description:
-            "Beginning my learning path in technology, software and problem solving.",
-          icon: "lucide:rocket",
+            "Started my internship and worked on process automation, monitoring flows and system integrations.",
+          icon: "lucide:briefcase-business",
         },
       ],
     },
@@ -349,9 +342,6 @@ export const content = {
         message: "Message",
       },
       button: "Send Message",
-      defaultSubject: "New message from portfolio",
-      whatsappMessage:
-        "Hello Mariana, I saw your portfolio and I would like to contact you.",
     },
 
     footer: {
@@ -671,31 +661,24 @@ export const content = {
       items: [
         {
           year: "2024",
-          title: "Análisis y desarrollo de software",
+          title: "Inicio de mi Trayectoria",
           description:
-            "Aprendizaje y construcción de soluciones digitales desde frontend, backend y análisis de requerimientos.",
+            "Comencé mis estudios en Análisis y Desarrollo de Software, descubriendo mi pasión por crear soluciones digitales.",
+          icon: "lucide:rocket",
+        },
+        {
+          year: "2025",
+          title: "Construcción de Proyectos",
+          description:
+            "Desarrollé Indrugs y otros proyectos académicos, adquiriendo experiencia en desarrollo backend y arquitectura de software.",
           icon: "lucide:code-xml",
         },
         {
-          year: "2023",
-          title: "Análisis funcional",
+          year: "2026",
+          title: "Experiencia Profesional",
           description:
-            "Levantamiento de requerimientos, documentación y comprensión de necesidades de usuario.",
-          icon: "solar:document-text-outline",
-        },
-        {
-          year: "2022",
-          title: "Desarrollo web",
-          description:
-            "Práctica en frontend, desarrollo de interfaces y diseño responsivo.",
-          icon: "lucide:monitor",
-        },
-        {
-          year: "2021",
-          title: "Inicio de mi recorrido",
-          description:
-            "Inicio de mi camino de aprendizaje en tecnología, software y resolución de problemas.",
-          icon: "lucide:rocket",
+            "Inicié mis prácticas profesionales, trabajando en automatización de procesos, flujos de monitoreo e integración de sistemas.",
+          icon: "lucide:briefcase-business",
         },
       ],
     },
@@ -711,9 +694,6 @@ export const content = {
         message: "Mensaje",
       },
       button: "Enviar mensaje",
-      defaultSubject: "Nuevo mensaje desde el portafolio",
-      whatsappMessage:
-        "Hola Mariana, vi tu portafolio y me gustaría contactarte.",
     },
 
     footer: {

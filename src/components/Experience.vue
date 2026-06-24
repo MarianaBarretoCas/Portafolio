@@ -1,6 +1,8 @@
 <script setup>
 import { Icon } from "@iconify/vue";
-import { experience } from "../data/experience";
+import { useLanguage } from "../composables/useLanguage";
+
+const { t } = useLanguage();
 </script>
 
 <template>
@@ -8,20 +10,23 @@ import { experience } from "../data/experience";
     id="experience"
     class="mx-auto max-w-7xl border-b border-border-soft px-6 py-10 lg:px-8"
   >
-    <h2 class="mb-8 text-2xl font-semibold text-content">
-      Experience & Journey
-    </h2>
+    <div class="mb-10 text-center">
+      <h2 class="text-3xl font-bold text-content sm:text-4xl">
+        {{ t.experience.title }}
+      </h2>
+    </div>
 
-    <div class="grid gap-0 lg:grid-cols-4 lg:gap-8">
+    <div class="grid gap-0 lg:grid-cols-3 lg:gap-8">
       <article
-        v-for="(item, index) in experience"
+        v-for="(item, index) in t.experience.items"
         :key="item.year"
         class="group relative"
       >
-        <!-- Mobile layout -->
-        <div class="relative grid grid-cols-[3.5rem_1fr] gap-4 pb-10 last:pb-0 lg:hidden">
+        <div
+          class="relative grid grid-cols-[3.5rem_1fr] gap-4 pb-10 last:pb-0 lg:hidden"
+        >
           <div
-            v-if="index !== experience.length - 1"
+            v-if="index !== t.experience.items.length - 1"
             class="absolute left-6 top-14 bottom-0 w-px bg-gradient-to-b from-violet-500/70 via-violet-500/25 to-transparent"
           ></div>
 
@@ -55,9 +60,8 @@ import { experience } from "../data/experience";
           </div>
         </div>
 
-        <!-- Desktop layout -->
         <div class="hidden lg:block">
-          <div class="flex items-center gap-4">
+          <div class="flex items-center justify-center gap-3">
             <div
               class="inline-flex size-12 items-center justify-center rounded-full border border-border-soft bg-icon-purple-surface text-violet-400 shadow-soft transition-all duration-300 group-hover:-translate-y-1 group-hover:border-violet-500/50 group-hover:shadow-glow"
             >
