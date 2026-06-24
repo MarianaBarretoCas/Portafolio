@@ -24,27 +24,46 @@
   --shadow-glow-bg: var(--app-shadow-glow-bg);
   --shadow-nav: var(--app-shadow-nav);
   --color-panel: var(--panel);
---color-panel-strong: var(--panel-strong);
---color-feature-card: var(--feature-card);
---color-feature-card-hover: var(--feature-card-hover);
+  --color-panel-strong: var(--panel-strong);
+  --color-feature-card: var(--feature-card);
+  --color-feature-card-hover: var(--feature-card-hover);
 
---color-icon-purple-surface: var(--icon-purple-surface);
---color-icon-green-surface: var(--icon-green-surface);
---color-icon-yellow-surface: var(--icon-yellow-surface);
+  --color-icon-purple-surface: var(--icon-purple-surface);
+  --color-icon-green-surface: var(--icon-green-surface);
+  --color-icon-yellow-surface: var(--icon-yellow-surface);
 
---shadow-panel: var(--app-shadow-panel);
---shadow-project-hover: var(--app-shadow-project-hover);
+  --shadow-panel: var(--app-shadow-panel);
+  --shadow-project-hover: var(--app-shadow-project-hover);
+  --border-color-hover: var(--app-border-color-hover);
 }
 
 :root {
   color-scheme: dark;
 
-  --page: #020617;
+  --page: radial-gradient(
+      circle at top left,
+      rgba(138, 92, 246, 0.301),
+      transparent 34%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(34, 211, 238, 0.205),
+      transparent 34%
+    );
   --surface: rgba(15, 23, 42, 0.35);
   --surface-strong: rgba(15, 23, 42, 0.65);
   --card: rgba(2, 6, 23, 0.45);
   --input: rgba(2, 6, 23, 0.45);
-  --nav: rgba(2, 6, 23, 0.35);
+  --nav: radial-gradient(
+      circle at top left,
+      rgba(138, 92, 246, 0.301),
+      transparent 34%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(34, 211, 238, 0.205),
+      transparent 34%
+    );
 
   --content: #ffffff;
   --muted: #cbd5e1;
@@ -62,29 +81,47 @@
   --app-shadow-nav: 0 12px 40px rgba(0, 0, 0, 0.35);
 
   --panel: rgba(15, 23, 42, 0.32);
---panel-strong: rgba(15, 23, 42, 0.48);
+  --panel-strong: rgba(15, 23, 42, 0.48);
 
---feature-card: rgba(15, 23, 42, 0.42);
---feature-card-hover: rgba(30, 41, 59, 0.55);
+  --feature-card: rgba(15, 23, 42, 0.42);
+  --feature-card-hover: rgba(30, 41, 59, 0.55);
 
---icon-purple-surface: rgba(139, 92, 246, 0.18);
---icon-green-surface: rgba(34, 197, 94, 0.16);
---icon-yellow-surface: rgba(250, 204, 21, 0.16);
+  --icon-purple-surface: rgba(139, 92, 246, 0.18);
+  --icon-green-surface: rgba(34, 197, 94, 0.16);
+  --icon-yellow-surface: rgba(250, 204, 21, 0.16);
 
---app-shadow-panel: 0 18px 50px rgba(0, 0, 0, 0.28);
---app-shadow-project-hover: 0 18px 30px rgba(142, 29, 248, 0.479);
-
+  --app-shadow-panel: 0 18px 50px rgba(0, 0, 0, 0.28);
+  --app-shadow-project-hover: 0 18px 30px rgba(142, 29, 248, 0.479);
+  --app-border-color-hover: rgba(138, 92, 246, 0.856);
 }
 
 .light {
   color-scheme: light;
 
-  --page: #f5f7fb;
+  --page: radial-gradient(
+      circle at top left,
+      rgba(138, 92, 246, 0.301),
+      transparent 34%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(34, 211, 238, 0.205),
+      transparent 34%
+    );
   --surface: rgba(255, 255, 255, 0.72);
   --surface-strong: rgba(255, 255, 255, 0.92);
   --card: rgba(255, 255, 255, 0.9);
   --input: rgba(255, 255, 255, 0.88);
-  --nav: rgba(255, 255, 255, 0.45);
+  --nav: radial-gradient(
+      circle at top left,
+      rgba(138, 92, 246, 0.301),
+      transparent 34%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(34, 211, 238, 0.205),
+      transparent 34%
+    );
 
   --content: #0f172a;
   --muted: #475569;
@@ -102,15 +139,16 @@
   --app-shadow-nav: 0 16px 40px rgba(15, 23, 42, 0.14);
 
   --panel: rgba(255, 255, 255, 0.72);
---panel-strong: rgba(255, 255, 255, 0.9);
+  --panel-strong: rgba(255, 255, 255, 0.9);
 
---feature-card: rgba(255, 255, 255, 0.86);
---feature-card-hover: rgba(255, 255, 255, 0.96);
+  --feature-card: rgba(255, 255, 255, 0.86);
+  --feature-card-hover: rgba(255, 255, 255, 0.96);
 
---icon-purple-surface: rgba(139, 92, 246, 0.14);
---icon-green-surface: rgba(34, 197, 94, 0.12);
---icon-yellow-surface: rgba(234, 179, 8, 0.14);
+  --icon-purple-surface: rgba(139, 92, 246, 0.14);
+  --icon-green-surface: rgba(34, 197, 94, 0.12);
+  --icon-yellow-surface: rgba(234, 179, 8, 0.14);
 
---app-shadow-panel: 0 18px 45px rgba(15, 23, 42, 0.12);
---app-shadow-project-hover: 0 18px 50px rgba(142, 29, 248, 0.541);
+  --app-shadow-panel: 0 18px 45px rgba(15, 23, 42, 0.12);
+  --app-shadow-project-hover: 0 18px 50px rgba(142, 29, 248, 0.541);
+  --app-border-color-hover: rgba(138, 92, 246, 0.9);
 }

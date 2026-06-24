@@ -139,7 +139,7 @@ body {
 }
 
 .input-field:focus {
-  border-color: rgba(139, 92, 246, 0.75);
+  border-color: var(--app-border-color-hover);
   box-shadow: var(--app-shadow-glow);
 }
 
@@ -147,31 +147,31 @@ body {
   border: 1px solid var(--border-soft);
   background: radial-gradient(
       circle at top left,
-      rgba(139, 92, 246, 0.1),
+      rgba(138, 92, 246, 0.2),
       transparent 34%
     ),
     radial-gradient(
       circle at bottom right,
-      rgba(34, 211, 238, 0.08),
+      rgba(34, 211, 238, 0.1),
       transparent 34%
     ),
     var(--card);
   box-shadow: var(--app-shadow-card);
   backdrop-filter: blur(20px);
-  border-radius: 1.6rem 2rem 1.4rem 1.9rem / 1.9rem 1.4rem 2rem 1.5rem;
+  border-radius: 40px 10px;
   transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease,
     background-color 0.3s ease;
 }
 
 .project-organic-card:hover {
   transform: translateY(-0.35rem);
-  border-color: rgba(139, 92, 246, 0.65);
+  border-color: var(--app-border-color-hover);
   box-shadow: 0 18px 45px rgba(15, 23, 42, 0.18),
     0 0 34px rgba(139, 92, 246, 0.28);
 }
 
 .project-organic-image {
-  border-radius: 1.2rem 1.6rem 1rem 1.4rem / 1.4rem 1rem 1.6rem 1.2rem;
+  border-radius: 40px 10px;
 }
 
 .project-chip {

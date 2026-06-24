@@ -254,6 +254,53 @@ export const content = {
           demoUrl: "#",
           githubUrl: "https://github.com/MarianaBarretoCas",
         },
+        {
+          title: "Indrugs",
+          type: "Pharmacy Management System",
+          status: "Completed",
+          image: "/images/projects/project-1.png",
+
+          shortDescription:
+            "A web system designed to centralize inventory, medication, order, delivery and administrative management for a pharmaceutical operation.",
+
+          problem:
+            "The operation needed a centralized platform to manage medications, control inventory, handle orders, organize deliveries and support administrative processes more efficiently.",
+
+          solution:
+            "I developed a Spring Boot web application using a layered architecture, implementing role-based access control, business logic, DTOs, mappers and specialized modules to organize pharmaceutical operations.",
+
+          role: "I contributed to both backend and frontend development by implementing entities, repositories, services, controllers, business logic and key features. I also collaborated on the system’s visual structure and user experience.",
+
+          features: [
+            "Role-based access control",
+            "Inventory management",
+            "Medication administration",
+            "Order management",
+            "Delivery and vehicle modules",
+            "Dashboard and reporting",
+            "Mass email functionality",
+            "Password recovery",
+            "User profile management",
+            "PQRS management",
+            "Layered architecture with DTOs and mappers",
+          ],
+
+          technologies: [
+            "Java",
+            "Spring Boot",
+            "Spring Security",
+            "JPA",
+            "Hibernate",
+            "MySQL",
+            "Maven",
+            "Docker",
+          ],
+
+          demoLabel: "View Project",
+          githubLabel: "Repository",
+          demoUrl: "#",
+          githubUrl: "https://github.com/MarianaBarretoCas",
+        },
       ],
     },
 
@@ -565,6 +612,53 @@ export const content = {
           ],
 
           demoLabel: "Ver flujo",
+          githubLabel: "Repositorio",
+          demoUrl: "#",
+          githubUrl: "https://github.com/MarianaBarretoCas",
+        },
+        {
+          title: "Indrugs",
+          type: "Sistema de Gestión Farmacéutica",
+          status: "Completado",
+          image: "/images/projects/project-1.png",
+
+          shortDescription:
+            "Sistema web diseñado para centralizar la gestión de inventario, medicamentos, pedidos, entregas y procesos administrativos en una operación farmacéutica.",
+
+          problem:
+            "La operación necesitaba una plataforma centralizada para administrar medicamentos, controlar inventario, gestionar pedidos, organizar entregas y manejar procesos administrativos de forma más eficiente.",
+
+          solution:
+            "Desarrollé una aplicación web con Spring Boot y una arquitectura por capas, implementando control de acceso por roles, lógica de negocio, DTOs, mapeadores y módulos especializados para organizar las operaciones farmacéuticas.",
+
+          role: "Participé en el desarrollo backend y frontend, implementando entidades, repositorios, servicios, controladores, lógica de negocio y funcionalidades clave. También colaboré en la estructura visual y experiencia de usuario del sistema.",
+
+          features: [
+            "Control de acceso basado en roles",
+            "Gestión de inventario",
+            "Administración de medicamentos",
+            "Gestión de pedidos",
+            "Módulos de domicilios y vehículos",
+            "Dashboard y reportes",
+            "Envío masivo de correos",
+            "Recuperación de contraseña",
+            "Gestión de perfil de usuario",
+            "Gestión de PQRS",
+            "Arquitectura por capas con DTOs y mapeadores",
+          ],
+
+          technologies: [
+            "Java",
+            "Spring Boot",
+            "Spring Security",
+            "JPA",
+            "Hibernate",
+            "MySQL",
+            "Maven",
+            "Docker",
+          ],
+
+          demoLabel: "Ver proyecto",
           githubLabel: "Repositorio",
           demoUrl: "#",
           githubUrl: "https://github.com/MarianaBarretoCas",

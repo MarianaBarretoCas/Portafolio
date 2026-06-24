@@ -31,7 +31,7 @@ ${form.message}`
 <template>
   <section
     id="contact"
-    class="mx-auto max-w-7xl scroll-mt-32 border-t border-border-soft px-6 pt-14 pb-20 lg:px-8"
+    class="mx-auto max-w-7xl scroll-mt-32 px-6 pt-14 pb-20 lg:px-8"
   >
     <div class="glass-surface rounded-3xl p-6 lg:p-8">
       <div class="grid gap-10 lg:grid-cols-[0.9fr_1.4fr]">

@@ -8,10 +8,6 @@ defineProps({
     type: Object,
     required: true,
   },
-  index: {
-    type: Number,
-    required: true,
-  },
 });
 
 const { t } = useLanguage();
@@ -29,9 +25,8 @@ const closeDetails = () => {
 
 <template>
   <article
-    class="project-organic-card group relative h-[455px] w-full max-w-[340px] overflow-hidden p-4"
+    class="project-organic-card group relative h-[520px] w-full max-w-[340px] overflow-hidden p-4"
   >
-    <!-- Imagen principal -->
     <div
       class="project-organic-image relative h-40 overflow-hidden bg-surface-strong"
     >
@@ -46,19 +41,12 @@ const closeDetails = () => {
       ></div>
 
       <span
-        class="absolute left-3 top-3 inline-flex size-8 items-center justify-center rounded-xl border border-white/20 bg-black/55 text-xs font-bold text-white backdrop-blur-md"
-      >
-        {{ String(index + 1).padStart(2, "0") }}
-      </span>
-
-      <span
         class="absolute bottom-3 left-3 max-w-[88%] rounded-full border border-violet-300/30 bg-violet-500/25 px-3 py-1 text-[11px] font-semibold text-white backdrop-blur-md"
       >
         {{ project.type }}
       </span>
     </div>
 
-    <!-- Contenido frontal -->
     <div class="flex h-[calc(100%-10rem)] flex-col pt-4">
       <span class="project-chip mb-3 w-fit">
         {{ project.status }}
@@ -69,14 +57,14 @@ const closeDetails = () => {
       </h3>
 
       <p
-        class="mb-4 max-h-[72px] overflow-hidden text-sm leading-relaxed text-muted"
+        class="mb-4 max-h-[100px] overflow-hidden text-sm leading-relaxed text-muted"
       >
         {{ project.shortDescription }}
       </p>
 
       <div class="mb-4 flex flex-wrap gap-2">
         <span
-          v-for="technology in project.technologies.slice(0, 4)"
+          v-for="technology in project.technologies.slice(0, 5)"
           :key="technology"
           class="project-chip"
         >
@@ -84,10 +72,10 @@ const closeDetails = () => {
         </span>
 
         <span
-          v-if="project.technologies.length > 4"
+          v-if="project.technologies.length > 5"
           class="project-chip text-muted"
         >
-          +{{ project.technologies.length - 4 }}
+          +{{ project.technologies.length - 5 }}
         </span>
       </div>
 
@@ -121,7 +109,6 @@ const closeDetails = () => {
       </div>
     </div>
 
-    <!-- Case Study encima de la misma card -->
     <Transition
       enter-active-class="transition-all duration-300 ease-out"
       enter-from-class="translate-y-5 opacity-0"
