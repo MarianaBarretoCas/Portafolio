@@ -152,7 +152,7 @@ body {
     ),
     radial-gradient(
       circle at bottom right,
-      rgba(34, 211, 238, 0.1),
+      rgba(34, 211, 238, 0.2),
       transparent 34%
     ),
     var(--card);
