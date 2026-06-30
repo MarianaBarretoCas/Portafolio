@@ -22,11 +22,11 @@ const navLinks = computed(() => [
 const cvUrl = computed(() =>
   language.value === "en"
     ? "/cv/Cv-Mariana.pdf"
-    : "/cv/Hoja-de-vida-Mariana.pdf"
+    : "/cv/Hoja-de-vida-Mariana.pdf",
 );
 
 const cvFileName = computed(() =>
-  language.value === "en" ? "Cv-Mariana.pdf" : "Hoja-de-vida-Mariana.pdf"
+  language.value === "en" ? "Cv-Mariana.pdf" : "Hoja-de-vida-Mariana.pdf",
 );
 
 const downloadCv = async () => {
@@ -123,15 +123,24 @@ onUnmounted(() => {
         </ul>
 
         <div class="hidden items-center gap-4 md:flex">
-          <button
-            type="button"
-            class="btn btn-primary group"
-            @click="downloadCv"
-          >
-            {{ t.cv.button }}
+          <div class="relative group">
+            <button
+              type="button"
+              class="btn btn-primary"
+              @click="downloadCv"
+              :aria-label="t.cv.buttonLabel"
+            >
+              {{ t.cv.button }}
 
-            <Icon icon="lucide:download" class="text-lg" />
-          </button>
+              <Icon icon="lucide:download" class="text-lg" />
+            </button>
+
+            <span
+              class="pointer-events-none absolute right-4 top-full z-50 w-max max-w-[220px] rounded-xl border border-border-soft bg-surface-strong px-3 py-2 text-xs font-medium text-content opacity-0 shadow-card backdrop-blur-xl transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100"
+            >
+              {{ t.cv.buttonLabel }}
+            </span>
+          </div>
 
           <button
             type="button"

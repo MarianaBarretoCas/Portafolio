@@ -11,6 +11,7 @@ export const content = {
 
     cv: {
       button: "Download CV",
+      buttonLabel: "English Version",
     },
 
     hero: {
@@ -101,6 +102,7 @@ export const content = {
           technologies: [
             { name: "Node.js", icon: "devicon:nodejs" },
             { name: "Spring Boot", icon: "devicon:spring" },
+            { name: ".Net", icon: "skill-icons:dotnet" },
             { name: "REST APIs", icon: "carbon:api" },
           ],
         },
@@ -250,9 +252,7 @@ export const content = {
           ],
 
           demoLabel: "View Flow",
-          githubLabel: "Repository",
           demoUrl: "#",
-          githubUrl: "https://github.com/MarianaBarretoCas",
         },
       ],
     },
@@ -315,6 +315,7 @@ export const content = {
 
     cv: {
       button: "Descargar CV",
+      buttonLabel: "Versión en Español",
     },
 
     hero: {
@@ -406,6 +407,7 @@ export const content = {
           technologies: [
             { name: "Node.js", icon: "devicon:nodejs" },
             { name: "Spring Boot", icon: "devicon:spring" },
+            { name: ".Net", icon: "skill-icons:dotnet" },
             { name: "REST APIs", icon: "carbon:api" },
           ],
         },
@@ -555,9 +557,7 @@ export const content = {
           ],
 
           demoLabel: "Ver flujo",
-          githubLabel: "Repositorio",
           demoUrl: "#",
-          githubUrl: "https://github.com/MarianaBarretoCas",
         },
         {
           title: "Indrugs",
