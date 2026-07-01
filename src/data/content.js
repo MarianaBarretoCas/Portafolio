@@ -559,53 +559,6 @@ export const content = {
           demoLabel: "Ver flujo",
           demoUrl: "#",
         },
-        {
-          title: "Indrugs",
-          type: "Sistema de Gestión Farmacéutica",
-          status: "Completado",
-          image: "/images/projects/project-1.png",
-
-          shortDescription:
-            "Sistema web diseñado para centralizar la gestión de inventario, medicamentos, pedidos, entregas y procesos administrativos en una operación farmacéutica.",
-
-          problem:
-            "La operación necesitaba una plataforma centralizada para administrar medicamentos, controlar inventario, gestionar pedidos, organizar entregas y manejar procesos administrativos de forma más eficiente.",
-
-          solution:
-            "Desarrollé una aplicación web con Spring Boot y una arquitectura por capas, implementando control de acceso por roles, lógica de negocio, DTOs, mapeadores y módulos especializados para organizar las operaciones farmacéuticas.",
-
-          role: "Participé en el desarrollo backend y frontend, implementando entidades, repositorios, servicios, controladores, lógica de negocio y funcionalidades clave. También colaboré en la estructura visual y experiencia de usuario del sistema.",
-
-          features: [
-            "Control de acceso basado en roles",
-            "Gestión de inventario",
-            "Administración de medicamentos",
-            "Gestión de pedidos",
-            "Módulos de domicilios y vehículos",
-            "Dashboard y reportes",
-            "Envío masivo de correos",
-            "Recuperación de contraseña",
-            "Gestión de perfil de usuario",
-            "Gestión de PQRS",
-            "Arquitectura por capas con DTOs y mapeadores",
-          ],
-
-          technologies: [
-            "Java",
-            "Spring Boot",
-            "Spring Security",
-            "JPA",
-            "Hibernate",
-            "MySQL",
-            "Maven",
-            "Docker",
-          ],
-
-          demoLabel: "Ver proyecto",
-          githubLabel: "Repositorio",
-          demoUrl: "#",
-          githubUrl: "https://github.com/MarianaBarretoCas",
-        },
       ],
     },
 
